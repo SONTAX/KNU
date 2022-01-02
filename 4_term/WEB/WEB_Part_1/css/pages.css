@@ -1,0 +1,50 @@
+#page1{
+  opacity: 1;
+  width: 83%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#page2{
+  opacity: 0;
+}
+
+#page3{
+  opacity: 0;
+}
+
+#page4{
+  opacity: 0;
+}
+
+.product img{
+  width: calc(100% + 10px);
+  margin-left: -10px;
+  border-radius: 10px 10px 0 0;
+  height: 40%;
+}
+
+.product{
+  position: relative;
+  width: 30%;
+  height: 434px;
+  background-color: #3977A7;
+  padding-left: 10px;
+  margin-bottom: 30px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.product ul{
+  margin-left: -5%;
+  margin-top: -5%;
+}
+
+.product .caps-text{
+  float: right;
+  right: 10%;
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 5px;
+}

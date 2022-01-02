@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+html{
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.content{
+  display: block;
+  width: 980px;
+  height: 100%;
+  margin: auto;
+  padding: 0 10px;
+}
+
+#header-wrapper{
+  display: block;
+  background-color: #99CCCC;
+  width: 100%;
+  height: 150px;
+}
+
+#logo{
+  width: 120px;
+  height: 100px;
+}
+
+#company-name{
+  font-size: 1.5em;
+  color: #336799;
+}
+
+#left-header{
+  float: left;
+  display: flex;
+  align-items: stretch;
+  margin: 25px 0;
+}
+
+.caps-text{
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+#feedback-text{
+  font-size: 1.5em;
+  border-bottom: 3px dotted #336799;
+  float: right;
+  color: black;
+  text-decoration: none;
+}
+
+#right-header{
+  float: right;
+}
+
+#footer-wrapper{
+  display: block;
+  background-color: #006799;
+  color: #CCCCCC;
+  width: 100%;
+  height: 170px;
+}
+
+#footer-content{
+  display: flex;
+  justify-content: space-between;
+  width: 980px;
+  margin: auto;
+  padding: 20px;
+}
+
+#menu-wrapper{
+  display: block;
+  width: 100%;
+  background-color: black;
+}
+
+#menu{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+#menu li{
+  display: inline-block;
+  list-style-type: none;
+  margin: 10px 20px;
+  color: white;
+}
+
+#menu li a{
+  text-decoration: none;
+  color: white;
+}
+
+#way-wrapper{
+  display: block;
+}
+
+#way{
+  width: 960px;
+  color: black;
+  background-color: #B2D5EF;
+  height: 50px;
+  line-height: 20px;
+}
+
+#main{
+  display: flex;
+  align-items: stretch;
+  padding-bottom: 50px;
+  background-color: #B2D5EF;
+  width: 960px;
+}
+
+#left-block{
+  width: 15%;
+  padding-left: 5px;
+  border-right: 1px solid #000033;
+  text-decoration: underline;
+  margin-bottom: 50px;
+}
+
+.list{
+  list-style-type: none;
+  margin-left: -30px;
+}
+
+#right-block{
+  flex: 1;
+}
+
+#bottom-text{
+  width: 82%;
+  column-count: 2;
+  column-gap: 30px;
+  text-align: justify;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #000033;
+}

@@ -1,0 +1,12 @@
+[submodule "Sandbox/external/libfort"]
+	path = Sandbox/external/libfort
+	url = https://github.com/seleznevae/libfort
+[submodule "tests/external/doctest"]
+	path = tests/external/doctest
+	url = https://github.com/onqtam/doctest
+[submodule "GeneralAlgebra/external/Random"]
+	path = GeneralAlgebra/external/Random
+	url = https://github.com/NavkaGleb/Random
+[submodule "Sandbox/external/Ziben"]
+	path = Sandbox/external/Ziben
+	url = https://github.com/NavkaGleb/Ziben

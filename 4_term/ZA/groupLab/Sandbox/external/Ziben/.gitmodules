@@ -1,0 +1,30 @@
+[submodule "Ziben/External/glfw"]
+	path = Ziben/External/glfw
+	url = https://github.com/glfw/glfw
+[submodule "Ziben/External/glew-cmake"]
+	path = Ziben/External/glew-cmake
+	url = https://github.com/Perlmint/glew-cmake
+[submodule "Ziben/External/spdlog"]
+	path = Ziben/External/spdlog
+	url = https://github.com/gabime/spdlog
+[submodule "Ziben/External/imgui"]
+	path = Ziben/External/imgui
+	url = https://github.com/ocornut/imgui
+[submodule "Ziben/External/stb"]
+	path = Ziben/External/stb
+	url = https://github.com/nothings/stb
+[submodule "Ziben/External/glm"]
+	path = Ziben/External/glm
+	url = https://github.com/g-truc/glm
+[submodule "Ziben/External/entt"]
+	path = Ziben/External/entt
+	url = https://github.com/skypjack/entt
+[submodule "Ziben/External/freetype"]
+	path = Ziben/External/freetype
+	url = https://github.com/freetype/freetype
+[submodule "Ziben/External/yaml-cpp"]
+	path = Ziben/External/yaml-cpp
+	url = https://github.com/jbeder/yaml-cpp
+[submodule "Ziben/External/ImGuizmo"]
+	path = Ziben/External/ImGuizmo
+	url = https://github.com/NavkaGleb/ImGuizmo
