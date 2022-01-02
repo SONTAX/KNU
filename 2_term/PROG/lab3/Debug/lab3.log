@@ -1,0 +1,9 @@
+﻿  lab3.cpp
+D:\c++\2_term\lab3\lab3\Header.h(71,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\c++\2_term\lab3\lab3\lab3.cpp(19,35): warning C4018: <: несоответствие типов со знаком и без знака
+D:\c++\2_term\lab3\lab3\lab3.cpp(41,35): warning C4018: <: несоответствие типов со знаком и без знака
+D:\c++\2_term\lab3\lab3\lab3.cpp(53,35): warning C4018: <: несоответствие типов со знаком и без знака
+D:\c++\2_term\lab3\lab3\lab3.cpp(75,35): warning C4018: <: несоответствие типов со знаком и без знака
+D:\c++\2_term\lab3\lab3\lab3.cpp(115,35): warning C4018: <: несоответствие типов со знаком и без знака
+D:\c++\2_term\lab3\lab3\lab3.cpp(131,35): warning C4018: <: несоответствие типов со знаком и без знака
+  lab3.vcxproj -> D:\c++\2_term\lab3\Debug\lab3.exe
