@@ -1,0 +1,13 @@
+<!ELEMENT warehouse (section*)>
+<!ELEMENT section (good*)>
+<!ELEMENT good (#PCDATA)>
+<!ATTLIST section
+        id ID #REQUIRED
+        name CDATA #REQUIRED
+>
+<!ATTLIST good
+        id ID #REQUIRED
+        sectionId IDREF #REQUIRED
+        name CDATA #REQUIRED
+        price CDATA #REQUIRED
+>

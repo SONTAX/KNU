@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE warehouse SYSTEM "warehouse.dtd">
+<warehouse>
+    <section id="x1" name="Chancellery">
+        <good id="id1" name="Pencil" price="12" sectionId="x1"/>
+        <good id="id2" name="Tape" price="37" sectionId="x1"/>
+    </section>
+    <section id="x3" name="Plumbing">
+        <good id="id7" name="Sink" price="12" sectionId="x3"/>
+        <good id="id3" name="good" price="13" sectionId="x3"/>
+        <good id="id4" name="" price="13" sectionId="x3"/>
+        <good id="id5" name="" price="13" sectionId="x3"/>
+        <good id="id6" name="" price="13" sectionId="x3"/>
+        <good id="id8" name="" price="13" sectionId="x3"/>
+    </section>
+</warehouse>

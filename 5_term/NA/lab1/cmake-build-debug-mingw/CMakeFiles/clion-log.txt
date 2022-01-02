@@ -1,0 +1,4 @@
+"D:\JetBrains\CLion 2021.1.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" "E:\KNU\5_term\Numerical analysis\lab1"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: E:/KNU/5_term/Numerical analysis/lab1/cmake-build-debug-mingw

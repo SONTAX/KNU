@@ -1,0 +1,1 @@
+MinGW not found at: C:\dev\mingw64\x86_64-w64-mingw32\bin Configure Disable profile

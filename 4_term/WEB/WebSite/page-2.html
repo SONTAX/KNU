@@ -1,0 +1,602 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Учобовий сайт ProgGeo </title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="javascript.js"></script>
+	</head>
+	<body>
+	   <header>
+	    <ul id="menu">
+                <div class="shapka">	    
+	              <img src="image/1234.jpg" width="24%" height="5%" style="float:left; margin-right:1%;" class="img">				 
+			      <li class="menu"><a href="index.html">Головна</a></li>                                                                                           
+				  <li class="menu"><a href="page-3.html">Уроки Pascal</a></li>
+				  <li class="menu"><a href="page-4.html">Конкурс Перлинка</a></li>	
+                  <li class="menu"><a href="page-2.html">Математичні криві</a></li>
+                  <li class="menu"><a href="page-5.html">Перевір себе</a></li>  				  
+  		       </div>
+			   </ul>	
+	   </header>
+	     <article id="main">
+		 <a href="#top">
+		 <div class="top">Вгору</div>
+		 </a>
+		 <div>
+		 <h2 style=" display:none">Головна</h2>
+		 </div>
+		 <div>
+ 		  <h2 class="zagl">Математичні криві</h2>
+		  <blockquote>
+		  <p class="mytext">" 
+		  Творчість математика в такім же мірі є створення прекрасного, як творчість живописця чи поета...
+		  "<br>
+		  &copy;Годфрі Харді
+		  </p>
+		  </blockquote>
+		  <p>У світі існує безліч кривих. Кожний з нас може створити власну криву: поставити точку на аркуші та не відриваючи від неї олівця зробити довільний рух, завести лінію
+		  куди хочеш. Так і утвориться твоя власна крива. Але існують особливі криві, які мають повні властивості. 
+		  </p>
+		  <p>А більш допитливим з вас ми пропонуємо дізнатись про такі цікаві математичні криві, як:<font color="red"> парабола, гіпербола, локон Аньєзі, еліпс, парабола Нейля, фігури Лісажу</font>.
+		  </p>
+		  <p>Ці книги неможливо правильно зобразити від руки на чистому аркуші, вони мають бути побудовані у прямокутній декартовій системі координат.
+		  </p>
+		  <h2>Координатна площина</h2>
+		  <p><img src="image/координатна площина.jpg" width="65%" height="50%" style="float:right;">
+		  Проведемо дві перпендикулярні координатні прямі, які перетинаються в початку їх відліку — точці О. Ці прямі називаються осями координат. Горизон­тальну пряму називають віссю абсцис і позначають Ox, вертикальну — віссю ординат і позначають Oy. Точку О називають початком координат. Ці координатні прямі утворюють декартову прямо­кутну систему координат. Пло­щи­на, на якій задана прямокутна система координат, називається координатною площиною. Через будь-яку точку А координатної площини можна провести прямі, перпендикулярні до осей Ox і Oy.
+          Нехай ці прямі перетнуть відповідно вісь абсцис — у точці з координатою а, а вісь ординат — у точці з координатою b.
+          Пара чисел (а, b) визначає положення точки А на координатній площині й називається її координатами. Позначають А(а, b). Число а називається абсцисою точки А, число b — її ординатою. Зверніть увагу: має значення, в якому порядку записані числа а і b. Точка В(b; а) не збігається з А(а; b).
+          Якщо точка лежить на осі абсцис, то її ордината дорівнює 0; якщо точка лежить на осі ординат, то її абсциса дорівнює нулю. Початок координат — О(0; 0).
+		 </p>
+		 <h2>Парабола</h2>
+		 <p>
+		 Криву задають рівняням y=a*x*x+b*x+c, вона є множиною точок,рівновіддалених від фіксованої точки (фокуса) і від поданої прямої (директиси).
+		 Криву широко використовують у математиці (графічний спосіб розв'язання квадпатних рівнянь та рівнянь, що зводяться до них), фізиці (траєкторія руху тіла, кинутого 
+		 під кутом до горизонту, під дією сили тяжіння), астрономії (II космічна швидкість).
+		 </p>
+		 <img src="image/Парабола.jpg" height="60%" width="90%" style="margin-top:20px;">
+		 <div class="pascal-zag">PascalABC - Парабола</div>
+		<table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>uses graphABC;</b> 
+<b>const</b> W = <span class="table-num">800</span>; H = <span class="table-num">500</span>;
+{Задаємо функцію:}
+<b>function</b> F(x,a,b,c: <span class="table-wor">real</span>): <span class="table-wor">real</span>;
+<b>begin</b>
+  F :=a*sqr(x)+b*x+c;
+<b>end;</b>
+<b>var</b>
+  x0, y0, xLeft, yLeft, x, xRight, yRight, y, n: <span class="table-wor">integer</span>;
+  a, b, c, d, x1, a1, b1, c1, y1, mx, my, dx, dy, num:<span class="table-wor"> real</span>;
+  i: <span class="table-wor">byte</span>;
+  s: <span class="table-wor">string</span>;
+<b>begin</b>
+  {1.Малюємо координатну площину}
+  SetWindowSize(W, H); 
+  xLeft := <span class="table-num">50</span>;
+  yLeft := <span class="table-num">50</span>;
+  xRight := W - <span class="table-num">50</span>;
+  yRight := H - <span class="table-num">50</span>;
+  a := <span class="table-num">-6</span>; b :=<span class="table-num"> 6</span>; dx :=<span class="table-num"> 0.5</span>;
+  c := <span class="table-num">-6</span>; d :=<span class="table-num">6</span>; dy := <span class="table-num">0.5</span>;
+  mx := (xRight - xLeft) / (b - a);                               
+  my := (yRight - yLeft) / (d - c);                         
+  x0 := trunc(abs(a) * mx) + xLeft;                                               
+  y0 := yRight - trunc(abs(c) * my);                                          
+  line(xLeft, y0, xRight + <span class="table-num">10</span>, y0); 
+  line(x0, yLeft - <span class="table-num">10</span>, x0, yRight);
+  SetFontSize(<span class="table-num">12</span>); 
+  SetFontColor(clBlue); 
+  TextOut(xRight + <span class="table-num">20</span>, y0 - <span class="table-num">15</span>, 'X'); 
+  TextOut(x0 - <span class="table-num">6</span>, yLeft - <span class="table-num">30</span>, 'Y'); 
+  SetFontSize(<span class="table-num">10</span>); 
+  SetFontColor(clBlue); 
+  {2.Штрихуємо абсцису }
+  n := round((b - a) / dx) + <span class="table-num">1</span>; 
+  <b>for</b> i := <span class="table-num">1</span> to n do
+  <b>begin</b>
+   num := a + (i - <span class="table-num">1</span>) * dx; 
+   x := xLeft + trunc(mx * (num - a)); 
+   Line(x, y0 - <span class="table-num">3</span>, x, y0 + <span class="table-num">3</span>); 
+   str(Num:0:1, s);
+   <b>if</b> abs(num) > 1E-<span class="table-num">15</span> then 
+      TextOut(x - TextWidth(s) div <span class="table-num">2</span>, y0 + <span class="table-num">7</span>, s);
+      SetFontSize(<span class="table-num">8</span>);
+  <b>end;</b>
+  {3.Штрихуємо ординату }
+  n := round((d - c) / dy) + <span class="table-num">1</span>;
+  <b>for</b> i := <span class="table-num">1</span> to n do
+  <b>begin</b>
+    num := c + (i - <span class="table-num">1</span>) * dy; 
+    y := yRight - trunc(my * (num - c));
+    Line(x0 - <span class="table-num">3</span>, y, x0 + <span class="table-num">3</span>, y);
+    str(num:0:1, s);
+    <b>if</b> abs(num) > 1E-<span class="table-num">15</span> then 
+      TextOut(x0 + <span class="table-num">7</span>, y - TextHeight(s) div <span class="table-num">2</span>, s);
+      SetFontSize(<span class="table-num">8</span>);
+      <b>end;</b>
+  TextOut(x0 - <span class="table-num">10</span>, y0 + <span class="table-num">10</span>, '0'); 
+  {4.Графік будуємо по крапкам}
+  x1 := a;
+  a1 := b-<span class="table-num">2</span>;
+  b1 := b+<span class="table-num">7</span>;
+  c1 := b+<span class="table-num">2</span>;
+  <b>while</b> x1 <= b do
+  <b>begin</b>
+    y1 := F(x1,a1,b1,c1); 
+    x := x0 + round(x1 * mx); 
+    y := y0 - round(y1 * my); 
+    <b>if<b> (y >= yLeft) and (y <= yRight) then SetPixel(x, y, clGreen);
+    x1 := x1 + <span class="table-num">0.001</span> 
+  <b>end</b>
+<b>end.</b>
+                </pre>
+		        </td>
+		   </tr>
+		 </table>
+		 <h2>Гіпербола</h2>
+		 <p>
+		 Криву задають рівнянням y=a/x. Гіпербола є множиною точок, для яких модуль різниці відстаней від двох заданих фіксованих точок (фокусів) сталий.
+  		 Криві такого типу використовують в астрономії (за III космічної швидкості тіло рухається вздовж вітки гіперболи), математиці(дослідження обернених величин). 
+		 </p>
+		 <img src="image/Гіпербола.jpg" height="60%" width="90%" style="margin-top:20px;">
+		 <div class="pascal-zag">PascalABC - Гіпербола</div>
+		<table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>uses graphABC;</b> 
+const W =<span class="table-num"> 800</span>; H =<span class="table-num"> 500</span>;
+{Задаємо функцію:}
+<b>function</b> F(x,a: <span class="table-wor">real</span>): <span class="table-wor">real</span>;
+<b>begin</b>
+  F := a / x; 
+<b>end;</b>
+<b>var</b>
+  x0, y0, xLeft, yLeft, xRight, yRight, x, y, n: <span class="table-wor">integer</span>;
+  a, b, c, d, x1, y1, mx, my, dx, a1, dy, num: <span class="table-wor">real</span>;
+  i: <span class="table-wor">byte</span>;
+  s: <span class="table-wor">string</span>;
+<b>begin</b>
+  {1.Малюємо координатну площину}
+  SetWindowSize(W, H); 
+  xLeft := <span class="table-num">50</span>;
+  yLeft := <span class="table-num">50</span>;
+  xRight := W <span class="table-num">- 50</span>;
+  yRight := H <span class="table-num">- 50</span>;
+  a := <span class="table-num">-6</span>; b :=<span class="table-num"> 6</span>; dx := <span class="table-num">0.5</span>;
+  c := <span class="table-num">-6</span>; d :=<span class="table-num">6</span>; dy :=<span class="table-num"> 0.5</span>;
+  mx := (xRight - xLeft) / (b - a);                              
+  my := (yRight - yLeft) / (d - c);                        
+  x0 := trunc(abs(a) * mx) + xLeft;                                              
+  y0 := yRight - trunc(abs(c) * my);                                           
+  line(xLeft, y0, xRight + <span class="table-num">10</span>, y0); 
+  line(x0, yLeft - <span class="table-num">10</span>, x0, yRight); 
+  SetFontSize(<span class="table-num">12</span>);
+  SetFontColor(clBlue); 
+  TextOut(xRight + <span class="table-num">20</span>, y0 <span class="table-num">- 15</span>, 'X');
+  TextOut(x0 <span class="table-num">- 6</span>, yLeft <span class="table-num">- 30</span>, 'Y');
+  SetFontSize(<span class="table-num">10</span>);
+  SetFontColor(clBlue);
+  {2.Штрихуємо абсцису }
+  n := round((b - a) / dx) + <span class="table-num">1</span>; 
+  <b> for </b> i := <span class="table-num">1</span> to n do
+  <b>begin</b>
+   num := a + (i - <span class="table-num">1</span>) * dx; 
+   x := xLeft + trunc(mx * (num - a)); 
+   Line(x, y0 - <span class="table-num">3</span>, x, y0 +<span class="table-num"> 3</span>); 
+   str(Num:0:1, s);
+   <b>if</b> abs(num) > 1E-15 then 
+      TextOut(x - TextWidth(s) div <span class="table-num">2</span>, y0 + <span class="table-num">7</span>, s);
+      SetFontSize(<span class="table-num">8</span>);
+  <b>end;</b>
+  {3.Штрихуємо ординату }
+  n := round((d - c) / dy) + <span class="table-num">1</span>; 
+  <b>for</b> i := <span class="table-num">1</span> to n do
+  <b>begin</b>
+    num := c + (i - <span class="table-num">1</span>) * dy; 
+    y := yRight - trunc(my * (num - c));
+    Line(x0 - <span class="table-num">3</span>, y, x0 + <span class="table-num">3</span>, y);
+    str(num:0:1, s);
+    <b>if</b> abs(num) > 1E-15 then 
+      TextOut(x0 + 7, y - TextHeight(s) div <span class="table-num">2</span>, s);
+      SetFontSize(8);
+      <b>end;</b>
+  TextOut(x0 - <span class="table-num">10</span>, y0 + <span class="table-num">10</span>, '0'); 
+ {4.Графік будуємо по крапкам}
+  x1 := a + <span class="table-num">6.5</span>; 
+  a1 := b - <span class="table-num">3</span>;
+  <b>while</b> x1 <= b do
+  <b>begin</b>
+    y1 := F(x1,a1); 
+    x := x0 + round(x1 * mx);
+    y := y0 - round(y1 * my);
+    <b>if </b>(y >= yLeft) and (y <= yRight) then SetPixel(x, y, clGreen);
+    x1 := x1 + <span class="table-num">0.001</span> 
+  <b>end;</b>
+  a1 := <span class="table-num">2.75</span>;
+  x1 := <span class="table-num">-5.5</span>;
+  <b>while</b> x1 <= <span class="table-num">-0.5</span> do  
+  <b>begin</b>
+    y1 := F(x1,a1);
+    x :=x0 + round(x1 * mx);
+    y :=y0 - round(y1 * my);
+    <b>if</b>(y >= yleft) and (y <= yright) then SetPixel(x,y,clGreen);
+    x1 := x1 + <span class="table-num">0.001</span>;
+  <b>end;<b> 
+<b>end.</b>
+                </pre>
+		        </td>
+		   </tr>
+		</table>
+		 <h2>Локон Аньєзі</h2>
+		 <p>
+		 Криву задають рівнянням y=a*a*a/(x*x+a*a). Цю криву вперше дослідила італьйська математик Марія Гаетана Аньєзі(1748), на честь якої криву й було названо.
+         В англомовних країнах цю криву називають "відьма Аньєзі". Вважають, це сталося тому, що перший переладач робіт Аньєзі англійською мовою - джон Кальсон - не зміг перекласти 
+		 рідковживаного італійського слова "la versiera".		 
+		 </p>
+		 <img src="image/Локон Аньєзі.jpg" height="60%" width="90%" style="margin-top:20px;">
+		 		 <div class="pascal-zag">PascalABC - Локон Аньєзі</div>
+		<table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>uses graphABC;</b> 
+<b>const</b> W = <span class="table-num">800</span>; H = <span class="table-num">500</span>;
+{Задаємо функцію:}
+<b>function</b> F(x,a: <span class="table-wor">real</span>): <span class="table-wor">real</span>;
+<b>begin</b>
+  F :=exp(3*ln(a))/(x*x+a*a); 
+<b>end;</b>
+<b>var</b>
+  x0, y0, xLeft, yLeft, x, xRight, yRight, y, n: <span class="table-wor">integer</span>;
+  a, b, c, d, x1, a1, y1, mx, my, dx, dy, num: <span class="table-wor">real</span>;
+  i: <span class="table-wor">byte</span>;
+  s: <span class="table-wor">string</span>;
+<b>begin</b>
+  {1.Малюємо координатну площину}
+  SetWindowSize(W, H); 
+  xLeft := <span class="table-num">50</span>;
+  yLeft := <span class="table-num">50</span>;
+  xRight := W - <span class="table-num">50</span>;
+  yRight := H - <span class="table-num">50</span>;
+  a := <span class="table-num">-6</span>; b :=<span class="table-num"> 6</span>; dx :=<span class="table-num"> 0.5</span>;
+  c := <span class="table-num">-6</span>; d :=<span class="table-num">6</span>; dy := <span class="table-num">0.5</span>;
+  mx := (xRight - xLeft) / (b - a);                               
+  my := (yRight - yLeft) / (d - c);                         
+  x0 := trunc(abs(a) * mx) + xLeft;                                               
+  y0 := yRight - trunc(abs(c) * my);                                          
+  line(xLeft, y0, xRight + <span class="table-num">10</span>, y0); 
+  line(x0, yLeft - <span class="table-num">10</span>, x0, yRight);
+  SetFontSize(<span class="table-num">12</span>); 
+  SetFontColor(clBlue); 
+  TextOut(xRight + <span class="table-num">20</span>, y0 - <span class="table-num">15</span>, 'X'); 
+  TextOut(x0 - <span class="table-num">6</span>, yLeft - <span class="table-num">30</span>, 'Y'); 
+  SetFontSize(<span class="table-num">10</span>); 
+  SetFontColor(clBlue); 
+  {2.Штрихуємо абсцису }
+  n := round((b - a) / dx) + <span class="table-num">1</span>; 
+  <b>for</b> i := <span class="table-num">1</span> to n do
+  <b>begin</b>
+   num := a + (i - <span class="table-num">1</span>) * dx; 
+   x := xLeft + trunc(mx * (num - a)); 
+   Line(x, y0 - <span class="table-num">3</span>, x, y0 + <span class="table-num">3</span>); 
+   str(Num:0:1, s);
+   <b>if</b> abs(num) > 1E-<span class="table-num">15</span> then 
+      TextOut(x - TextWidth(s) div <span class="table-num">2</span>, y0 + <span class="table-num">7</span>, s);
+      SetFontSize(<span class="table-num">8</span>);
+  <b>end;</b>
+  {3.Штрихуємо ординату }
+  n := round((d - c) / dy) + <span class="table-num">1</span>;
+  <b>for</b> i := <span class="table-num">1</span> to n do
+  <b>begin</b>
+    num := c + (i - <span class="table-num">1</span>) * dy; 
+    y := yRight - trunc(my * (num - c));
+    Line(x0 - <span class="table-num">3</span>, y, x0 + <span class="table-num">3</span>, y);
+    str(num:0:1, s);
+    <b>if</b> abs(num) > 1E-<span class="table-num">15</span> then 
+      TextOut(x0 + <span class="table-num">7</span>, y - TextHeight(s) div <span class="table-num">2</span>, s);
+      SetFontSize(<span class="table-num">8</span>);
+      <b>end;</b>
+  TextOut(x0 - <span class="table-num">10</span>, y0 + <span class="table-num">10</span>, '0'); 
+  {4.Графік будуємо по крапкам}
+  x1 := a; 
+  a1 := b-<span class="table-num">3</span>;
+  <b>while</b> x1 <= b do
+  <b>begin</b>
+    y1 := F(x1,a1); 
+    x := x0 + round(x1 * mx); 
+    y := y0 - round(y1 * my); 
+    <b>if</b> (y >= yLeft) and (y <= yRight) then SetPixel(x, y, clGreen);
+    x1 := x1 + <span class="table-num">0.001</span> 
+  <b>end</b>
+<b>end.</b>
+                </pre>
+		        </td>
+		   </tr>
+		 </table>
+		 <h2>Напівкубічна парабола(Нейля)</h2>
+		 <p>
+		 Криву задають рівняннями: x=t*t, y=a*t*t*t. Напівкубічну параболу названо на честь У. Нейля,який знайшов 1657 року довжину її дуги.Ця крива є еталонною в теорії катастроф, оскільки 
+		 будь-яка каустика вигляду "хвіст ластівки" (зокрема, крива Чирнгаузена) поблизу вершин добре наближається параболою Нейля.
+		 </p>
+		 <img src="image/Напівкубічна парабола.jpg" height="60%" width="90%" style="margin-top:20px;">
+		 <div class="pascal-zag">PascalABC - Напівкубічна парабола</div>
+		<table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>uses graphABC;</b> 
+<b>const</b> W = <span class="table-num">800</span>; H = <span class="table-num">500</span>;
+{Задаємо функцію:}
+<b>function</b> F(x,a: <span class="table-wor">real</span>): <span class="table-wor">real</span>;
+<b>begin</b>
+  F :=sqrt(a*exp(3*ln(x))); 
+<b>end;</b>
+<b>var</b>
+  x0, y0, xLeft, yLeft, x, xRight, yRight, y, n: <span class="table-wor">integer</span>;
+  a, b, c, d, x1, a1, y1, mx, my, dx, dy, num: <span class="table-wor">real</span>;
+  i: <span class="table-wor">byte</span>;
+  s: <span class="table-wor">string</span>;
+<b>begin</b>
+  {1.Малюємо координатну площину}
+  SetWindowSize(W, H); 
+  xLeft := <span class="table-num">50</span>;
+  yLeft := <span class="table-num">50</span>;
+  xRight := W - <span class="table-num">50</span>;
+  yRight := H - <span class="table-num">50</span>;
+  a := <span class="table-num">-6</span>; b :=<span class="table-num"> 6</span>; dx :=<span class="table-num"> 0.5</span>;
+  c := <span class="table-num">-6</span>; d :=<span class="table-num">6</span>; dy := <span class="table-num">0.5</span>;
+  mx := (xRight - xLeft) / (b - a);                               
+  my := (yRight - yLeft) / (d - c);                         
+  x0 := trunc(abs(a) * mx) + xLeft;                                               
+  y0 := yRight - trunc(abs(c) * my);                                          
+  line(xLeft, y0, xRight + <span class="table-num">10</span>, y0); 
+  line(x0, yLeft - <span class="table-num">10</span>, x0, yRight);
+  SetFontSize(<span class="table-num">12</span>); 
+  SetFontColor(clBlue); 
+  TextOut(xRight + <span class="table-num">20</span>, y0 - <span class="table-num">15</span>, 'X'); 
+  TextOut(x0 - <span class="table-num">6</span>, yLeft - <span class="table-num">30</span>, 'Y'); 
+  SetFontSize(<span class="table-num">10</span>); 
+  SetFontColor(clBlue); 
+  {2.Штрихуємо абсцису }
+  n := round((b - a) / dx) + <span class="table-num">1</span>; 
+  <b>for</b> i := <span class="table-num">1</span> to n do
+  <b>begin</b>
+   num := a + (i - <span class="table-num">1</span>) * dx; 
+   x := xLeft + trunc(mx * (num - a)); 
+   Line(x, y0 - <span class="table-num">3</span>, x, y0 + <span class="table-num">3</span>); 
+   str(Num:0:1, s);
+   <b>if</b> abs(num) > 1E-<span class="table-num">15</span> then 
+      TextOut(x - TextWidth(s) div <span class="table-num">2</span>, y0 + <span class="table-num">7</span>, s);
+      SetFontSize(<span class="table-num">8</span>);
+  <b>end;</b>
+  {3.Штрихуємо ординату }
+  n := round((d - c) / dy) + <span class="table-num">1</span>;
+  <b>for</b> i := <span class="table-num">1</span> to n do
+  <b>begin</b>
+    num := c + (i - <span class="table-num">1</span>) * dy; 
+    y := yRight - trunc(my * (num - c));
+    Line(x0 - <span class="table-num">3</span>, y, x0 + <span class="table-num">3</span>, y);
+    str(num:0:1, s);
+    <b>if</b> abs(num) > 1E-<span class="table-num">15</span> then 
+      TextOut(x0 + <span class="table-num">7</span>, y - TextHeight(s) div <span class="table-num">2</span>, s);
+      SetFontSize(<span class="table-num">8</span>);
+      <b>end;</b>
+  TextOut(x0 - <span class="table-num">10</span>, y0 + <span class="table-num">10</span>, '0'); 
+  {4.Графік будуємо по крапкам}
+  x1 := b-<span class="table-num">6</span>; 
+  a1 := b-<span class="table-num">2</span>;
+  <b>while</b> x1<=b do
+  <b>begin</b>
+    y1 := F(x1,a1); 
+    x := x0 + round(x1 * mx); 
+    y := y0 - round(y1 * my); 
+    <b>if</b> (y >= yLeft) and (y <= yRight) then SetPixel(x, y, clGreen);
+    x1 := x1 + <span class="table-num">0.001</span> 
+  <b>end;</b>
+  x1 := b-<span class="table-num">6</span>; 
+  a1 := b-<span class="table-num">2</span>;
+  <b>while</b> x1>=a do
+  <b>begin</b>
+    y1 := F(x1,a1); 
+    x := x0 + round(x1 * mx); 
+    y := y0 + round(y1 * my); 
+    <b>if</b> (y >= yLeft) and (y <= yRight) then SetPixel(x, y, clGreen);
+    x1 := x1 + <span class="table-num">0.001</span> 
+  <b>end</b>
+<b>end.</b>
+                </pre>
+		        </td>
+		   </tr>
+		 </table>
+		 <h2>Еліпс</h2>
+		 <p>
+		 Криву задють рівняннями: x=a*cos(t), y=b*cos(t). Еліпс - це множина (геометричне місце) всіх точок, для яких сума до двох заданих фіксованих точок (фокусів) стала.
+         якщо a=b, то фокуси еліпса стає колом. Еліпси використовують в образотворчому мистецтві як перспективне зображення кола, в астрономії(планети рухаються по еліптичних орбітах).	 
+		 </p>
+		 <img src="image/Еліпс.jpg" height="60%" width="90%" style="margin-top:20px;">
+		 <div class="pascal-zag">PascalABC - Еліпс</div>
+		<table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>uses graphABC;</b> 
+<b>const</b> W = <span class="table-num">800</span>; H = <span class="table-num">500</span>;
+{Задаємо функцію:}
+<b>function</b> F(x,a,b: <span class="table-wor">real</span>): <span class="table-wor">real</span>;
+<b>begin</b>
+  F :=sqrt((a*a*(b*b-x*x))/b*b);
+<b>end;</b>
+<b>var</b>
+  x0, y0, xLeft, yLeft, x, xRight, yRight, y, n: <span class="table-wor">integer</span>;
+  a, b, c, d, x1, a1, b1, y1, mx, my, dx, dy, num: <span class="table-wor">real</span>;
+  i: <span class="table-wor">byte</span>;
+  s: <span class="table-wor">string</span>;
+<b>begin</b>
+  {1.Малюємо координатну площину}
+  SetWindowSize(W, H); 
+  xLeft := <span class="table-num">50</span>;
+  yLeft := <span class="table-num">50</span>;
+  xRight := W - <span class="table-num">50</span>;
+  yRight := H - <span class="table-num">50</span>;
+  a := <span class="table-num">-6</span>; b :=<span class="table-num"> 6</span>; dx :=<span class="table-num"> 0.5</span>;
+  c := <span class="table-num">-6</span>; d :=<span class="table-num">6</span>; dy := <span class="table-num">0.5</span>;
+  mx := (xRight - xLeft) / (b - a);                               
+  my := (yRight - yLeft) / (d - c);                         
+  x0 := trunc(abs(a) * mx) + xLeft;                                               
+  y0 := yRight - trunc(abs(c) * my);                                          
+  line(xLeft, y0, xRight + <span class="table-num">10</span>, y0); 
+  line(x0, yLeft - <span class="table-num">10</span>, x0, yRight);
+  SetFontSize(<span class="table-num">12</span>); 
+  SetFontColor(clBlue); 
+  TextOut(xRight + <span class="table-num">20</span>, y0 - <span class="table-num">15</span>, 'X'); 
+  TextOut(x0 - <span class="table-num">6</span>, yLeft - <span class="table-num">30</span>, 'Y'); 
+  SetFontSize(<span class="table-num">10</span>); 
+  SetFontColor(clBlue); 
+  {2.Штрихуємо абсцису }
+  n := round((b - a) / dx) + <span class="table-num">1</span>; 
+  <b>for</b> i := <span class="table-num">1</span> to n do
+  <b>begin</b>
+   num := a + (i - <span class="table-num">1</span>) * dx; 
+   x := xLeft + trunc(mx * (num - a)); 
+   Line(x, y0 - <span class="table-num">3</span>, x, y0 + <span class="table-num">3</span>); 
+   str(Num:0:1, s);
+   <b>if</b> abs(num) > 1E-<span class="table-num">15</span> then 
+      TextOut(x - TextWidth(s) div <span class="table-num">2</span>, y0 + <span class="table-num">7</span>, s);
+      SetFontSize(<span class="table-num">8</span>);
+  <b>end;</b>
+  {3.Штрихуємо ординату }
+  n := round((d - c) / dy) + <span class="table-num">1</span>;
+  <b>for</b> i := <span class="table-num">1</span> to n do
+  <b>begin</b>
+    num := c + (i - <span class="table-num">1</span>) * dy; 
+    y := yRight - trunc(my * (num - c));
+    Line(x0 - <span class="table-num">3</span>, y, x0 + <span class="table-num">3</span>, y);
+    str(num:0:1, s);
+    <b>if</b> abs(num) > 1E-<span class="table-num">15</span> then 
+      TextOut(x0 + <span class="table-num">7</span>, y - TextHeight(s) div <span class="table-num">2</span>, s);
+      SetFontSize(<span class="table-num">8</span>);
+      <b>end;</b>
+  TextOut(x0 - <span class="table-num">10</span>, y0 + <span class="table-num">10</span>, '0'); 
+  {4.Графік будуємо по крапкам}
+  x1 := a; 
+  a1 := b-<span class="table-num">5</span>;
+  b1 := b;
+  <b>while</b> x1 <= b do
+  <b>begin</b>
+    y1 := F(x1,a1,b1); 
+    x := x0 + round(x1 * mx); 
+    y := y0 - round(y1 * my); 
+    <b>if</b> (y >= yLeft) and (y <= yRight) then SetPixel(x, y, clGreen);
+    x1 := x1 + <span class="table-num">0.001 </span>
+  <b>end;</b>
+  x1 := a; 
+  a1 := b-<span class="table-num">5</span>;
+  b1 := b;
+  <b>while</b> x1 <= b do
+  <b>begin</b>
+    y1 := F(x1,a1,b1); 
+    x := x0 + round(x1 * mx); 
+    y := y0 + round(y1 * my); 
+    <b>if</b> (y >= yLeft) and (y <= yRight) then SetPixel(x, y, clGreen);
+    x1 := x1 + <span class="table-num">0.001</span> 
+  <b>end;</b>
+<b>end.</b>
+                </pre>
+		        </td>
+		   </tr>
+		 </table>
+		 <h2>Фігури Лісажу</h2>
+		 <p>
+		 Криву задають рівняннями: x=sin(a*t), y=sin(b*t). Фігури Лісажу є замкненими траєкторіями, якими рухається точка,здійснючи коливання одночасно у двох взаємно перпендикулярних напрямках 
+		 (наприклад, на екрані осцилографа). Уперше вивчені такі траєкторії французьким ученим Ж.Лісажу(1822-1880). Вигляд фігур Лісажу є еліпсами, які вироджуються у відрізки прямих при різниці фаз 
+		 0 або pi. Якщо ж періоди коливань не точно збігаються, то відбувається постійна зміна різниці фаз, внаслідок чого еліпс постійно деформується. При цьому, якщо періоди відносяться як цілі числа,
+		 то через деякий проміжок часу, що дорівнює найменшому спільному кратному обох періодів, точка знову повернеться в початкове положення.
+		 </p>
+		 <img src="image/Фігури Лісажу.jpg" height="60%" width="90%" style="margin-top:20px;">
+		 		 <div class="pascal-zag">PascalABC - Фігури Лісажу</div>
+		<table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>uses graphABC;</b> 
+<b>const</b> W = <span class="table-num">800</span>; H = <span class="table-num">500</span>;
+<b>var</b>
+  x0, y0, xLeft, yLeft, x, xRight, yRight, y, n: <span class="table-wor">integer</span>;
+  a, b, c, d, x1, y1, t1, mx, my, dx, dy, num: <span class="table-wor">real</span>;
+  i: <span class="table-wor">byte</span>;
+  s: <span class="table-wor">string</span>;
+<b>begin</b>
+  {1.Малюємо координатну площину}
+  SetWindowSize(W, H); 
+  xLeft := <span class="table-num">50</span>;
+  yLeft := <span class="table-num">50</span>;
+  xRight := W - <span class="table-num">50</span>;
+  yRight := H - <span class="table-num">50</span>;
+  a := <span class="table-num">-6</span>; b :=<span class="table-num"> 6</span>; dx :=<span class="table-num"> 0.5</span>;
+  c := <span class="table-num">-6</span>; d :=<span class="table-num">6</span>; dy := <span class="table-num">0.5</span>;
+  mx := (xRight - xLeft) / (b - a);                               
+  my := (yRight - yLeft) / (d - c);                         
+  x0 := trunc(abs(a) * mx) + xLeft;                                               
+  y0 := yRight - trunc(abs(c) * my);                                          
+  line(xLeft, y0, xRight + <span class="table-num">10</span>, y0); 
+  line(x0, yLeft - <span class="table-num">10</span>, x0, yRight);
+  SetFontSize(<span class="table-num">12</span>); 
+  SetFontColor(clBlue); 
+  TextOut(xRight + <span class="table-num">20</span>, y0 - <span class="table-num">15</span>, 'X'); 
+  TextOut(x0 - <span class="table-num">6</span>, yLeft - <span class="table-num">30</span>, 'Y'); 
+  SetFontSize(<span class="table-num">10</span>); 
+  SetFontColor(clBlue); 
+  {2.Штрихуємо абсцису }
+  n := round((b - a) / dx) + <span class="table-num">1</span>; 
+  <b>for</b> i := <span class="table-num">1</span> to n do
+  <b>begin</b>
+   num := a + (i - <span class="table-num">1</span>) * dx; 
+   x := xLeft + trunc(mx * (num - a)); 
+   Line(x, y0 - <span class="table-num">3</span>, x, y0 + <span class="table-num">3</span>); 
+   str(Num:0:1, s);
+   <b>if</b> abs(num) > 1E-<span class="table-num">15</span> then 
+      TextOut(x - TextWidth(s) div <span class="table-num">2</span>, y0 + <span class="table-num">7</span>, s);
+      SetFontSize(<span class="table-num">8</span>);
+  <b>end;</b>
+  {3.Штрихуємо ординату }
+  n := round((d - c) / dy) + <span class="table-num">1</span>;
+  <b>for</b> i := <span class="table-num">1</span> to n do
+  <b>begin</b>
+    num := c + (i - <span class="table-num">1</span>) * dy; 
+    y := yRight - trunc(my * (num - c));
+    Line(x0 - <span class="table-num">3</span>, y, x0 + <span class="table-num">3</span>, y);
+    str(num:0:1, s);
+    <b>if</b> abs(num) > 1E-<span class="table-num">15</span> then 
+      TextOut(x0 + <span class="table-num">7</span>, y - TextHeight(s) div <span class="table-num">2</span>, s);
+      SetFontSize(<span class="table-num">8</span>);
+      <b>end;</b>
+  TextOut(x0 - <span class="table-num">10</span>, y0 + <span class="table-num">10</span>, '0'); 
+  {4.Графік будуємо по крапкам}
+  x1 := <span class="table-num">25</span>;
+  y1 := <span class="table-num">25</span>;
+  t1 := <span class="table-num">120</span>;
+  t1 := <span class="table-num">0</span>;
+  <b>while</b> t1<=<span class="table-num">130</span> do
+  <b>begin</b>
+    x := x0 + round(x1 + <span class="table-num">100</span> * Sin(<span class="table-num">0.99</span> * t1) - <span class="table-num">100</span> * Cos(<span class="table-num">3.01</span> * t1)); 
+    y := y0 - round(y1 - <span class="table-num">100</span> * Cos(<span class="table-num">1.01</span> * t1) + <span class="table-num">100</span> * Sin(<span class="table-num">15.03</span> * t1)); 
+   putpixel(x,y,clgreen);
+   t1:=t1+<span class="table-num">0.001</span>*pi;
+  <b>end;</b>
+<b>end.</b>
+                </pre>
+		        </td>
+		   </tr>
+		 </table>
+		 </div>
+	     </article> 
+		   <footer>
+		     &copy; 2016 ProgGeo
+	       </footer>	   
+	</body>
+</html>

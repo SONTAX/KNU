@@ -1,0 +1,6 @@
+D:\lab_1_DB_on_C\Debug\lab_1_DB_on_C.exe
+D:\lab_1_DB_on_C\Debug\lab_1_DB_on_C.pdb
+D:\Женя\lab_1_DB_on_C\Debug\lab_1_DB_on_C.exe
+D:\Женя\lab_1_DB_on_C\Debug\lab_1_DB_on_C.pdb
+D:\1\lab_1_DB_on_C\Debug\lab_1_DB_on_C.exe
+D:\1\lab_1_DB_on_C\Debug\lab_1_DB_on_C.pdb

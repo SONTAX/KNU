@@ -1,0 +1,95 @@
+@media (min-width: 576px){
+  .modal-dialog {
+    max-width: 500px;
+  }
+}
+
+.close{
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #336799;
+  text-align: center;
+  line-height: 30px;
+}
+
+.close:focus, .close:hover{
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body{
+  background-color: #99CDFF;
+  width: 100%;
+}
+
+.modal-content{
+  background-color: #99CDFF;
+}
+
+#feedback-form label{
+  display: block;
+  text-align: center;
+}
+
+#feedback-form textarea{
+  display: block;
+  min-width: 80%;
+  max-width: 80%;
+  min-height: 150px;
+  max-height: 150px;
+  padding: 6px;
+  margin: 0 auto 10px;
+  background-color: #99CCCC;
+  border: 1px solid #336799;
+}
+
+#feedback-button{
+  display: block;
+  margin: 0 auto;
+  height: 40px;
+  width: 200px;
+  line-height: 40px;
+  border: none;
+  vertical-align: center;
+  background-color: #000033;
+  color: white;
+}
+
+#feedback-button:hover{
+  background-color: #336799;
+  border: none;
+}
+
+#feedback-button:focus{
+  background-color: #99CDFF;
+  border: 3px solid #336799;
+  outline: none;
+  line-height: 34px;
+}
+
+#feedback-form input:not([type="button"]){
+  display: block;
+  width: 80%;
+  margin: 0 auto 10px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #336799;
+}
+
+#feedback-form input:not([type="submit"]):focus, #feedback-form textarea:focus{
+  outline: 0;
+  border: 3px solid #000033;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#feedback-form input::placeholder{
+  font-style: italic;
+  color: #99CCCC;
+}

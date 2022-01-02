@@ -1,0 +1,3 @@
+E:/KNU/5_term/Numerical analysis/lab1/cmake-build-debug-mingw/CMakeFiles/lab1.dir
+E:/KNU/5_term/Numerical analysis/lab1/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
+E:/KNU/5_term/Numerical analysis/lab1/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir

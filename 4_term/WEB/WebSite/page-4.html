@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Учобовий сайт ProgGeo </title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="javascript.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript">
+		window.onload = function()
+{
+	start(0,0);
+}
+var slide = 4;
+var now_slide = 1;
+var speed = 2000;
+var width = 448;
+function slider(ml)
+{
+	$("#slide").animate({marginLeft:ml+"px"},300);
+}
+function start(px,step)
+{
+	if(step == 0)
+	{
+		slider(px);
+		px = px - width;
+		now_slide++;
+		if(now_slide == slide)setTimeout("start("+px+",1);",speed);
+		else setTimeout("start("+px+",0);",speed);
+	}
+
+	if(step == 1)
+	{
+		slider(px);
+		px = px + width;
+		now_slide--;
+		if(now_slide == 1)setTimeout("start("+px+",0);",speed);
+		else setTimeout("start("+px+",1);",speed);
+	}
+}   
+    </script>
+	</head>
+	<body>
+	   <header>
+	    <ul id="menu">
+                <div class="shapka">	    
+	              <img src="image/1234.jpg" width="24%" height="5%" style="float:left; margin-right:1%;" class="img">				 
+			      <li class="menu"><a href="index.html">Головна</a></li>                                                                                           
+				  <li class="menu"><a href="page-3.html">Уроки Pascal</a></li>
+				  <li class="menu"><a href="page-4.html">Конкурс Перлинка</a></li>	
+                  <li class="menu"><a href="page-2.html">Математичні криві</a></li>
+                  <li class="menu"><a href="page-5.html">Перевір себе</a></li>  				  
+  		       </div>
+			   </ul>	
+	   </header>
+	     <article id="main">
+		 <a href="#top">
+		 <div class="top">Вгору</div>
+		 </a>
+		 <h2>Конкурс Перлинка</h2>
+		 <p>В конкурсі приймають участь команди  шкіл та позашкільних закладів області, складені з учнівської молоді, яка відвідує комп’ютерні гуртки та не досягла 14 років.
+		 Вік визначається на день проведення мандатної комісії. Делегації складаються з трьох осіб – двох конкурсантів та одного керівника. При бажанні заклад має можливість 
+		 виставляти на конкурс більше одної команди.<div class="slider">
+		 <table id="slide" cellpadding="0px" cellspacing="0px" border="0px">
+	         <tr>
+		          <td width="448px"><img src="image/per.jpg"></td>
+		          <td width="448px"><img src="image/perl.jpg"></td>
+		          <td width="448px"><img src="image/perli.jpg"></td>
+		          <td width="448px"><img src="image/perlinka.jpg"></td>
+	         </tr>
+         </table>
+		 </div>
+		 </p>
+		 <h4>Умови проведення</h4>
+		 <p> Учасник конкурсу приймає участь у кожній номінації (малюнок в Paint та  <font color="red">програмування  малюнку в Pascal</font>). Місце конкурсанта складається із суми балів, які він отримав за участь у двох номінаціях.
+         Всі комп’ютери на робочих місцях учасників конкурсу мають працювати в автономному режимі. Локальна мережа має бути відключена.
+		 </p>
+		 <h4>Загальні положення</h4>
+		 <p>1.1. Обласний конкурс учнівської молоді з інформаційних технологій <font color="red">«Комп’ютерна перлинка»</font> (далі – конкурс) проводиться щороку серед учнів молодшого шкільного віку 
+		 шкіл, ліцеїв, навчально – виховних комплексів та позашкільних навчальних закладів. Конкурс проводиться в номінаціях «Комп’ютерний вернісаж» та 
+		 <font color="red">«Графічне програмування»</font>.
+		 </p>
+		 <p>1.2. Основна мета проведення конкурсу – <font color="grey">це максимальне розкриття індивідуальних здібностей, нахилів, обдарованості дітей</font>; формування основ 
+		 інформаційної культури, яка виражається в умінні збирати, нагромаджувати й обробляти інформацію за допомогою комп’ютера; розвиток алгоритмічного мислення, 
+		 забезпечення наступності з подальшими ланками навчання.
+		 </p>
+		 <h2>Поради(обов'язково)</h2>
+		 <p>Якщо ви перейшли за цим посиланням, це означає, що ви отримали базові знання і вже хочете почати готуватися до <font color="red">конкурсу Перлинка</font>.
+		 Що ж, і ми вам з цим допоможемо.
+		 </p>
+		 <p>Що нам потрібно для початку? Для початку нам треба та сама <font color="red">частина системи координат</font>,на якій ми намалюємо малюнок, координат з якого
+		 будемо перености в нашу програму.Ось та сама система координат 
+		 <a href="image/setks.docx" class="download"><img src="image/download.png" width="30px" height="30px">cистема координат</a>. ЇЇ можна, як і роздрукувати,так і
+         скопіювати у графічний редактор(типу <font color="red">Paint</font>) й вже там малювати.		 
+		 </p>
+		 <p>Малюйте так,щоб вам було зручно потім переносити координат в програму. Тобто намагайтесь малювати 70% вашого малюнку на 
+		 <font color="red">"видимих точка"</font> (типу 100, 100). Так само з дугами. У складиних малюнках для того, щоб співпадала дуга з лінніями(або з іншим елементом),
+		 потрібно точно виміряти її градуси. Це легко зробити, якщо уявити собі в голові овал з цією дугою (з її градусами), а потім просто вирівнювати.
+		 </p>
+		 <p>Останнє чому потрібно тобі навчитися - це вміти економити час. Так, як конкурс триває приблизно одну годину,треба встигнути написати с коду, як можна більше.
+		 Тому так важливо начитися швидко набирати текст у <font color="red">Pascal'і</font>. Це приходить з часом,тому тренуйтеся,як можна більше. Також можете для економій
+		 часу, копіювати відносно схожі елементи програми за допомогою клавіш(<font color="red">Ctrl+Insert та Shift+Insert</font>).
+		 </p>
+		 <p>Мабуть, що все. Ось вам завдання для підготовки<a href="example/perlinka.zip" class="download"><img src="image/download.png" width="30px" height="30px">завдання</a>.
+		 Також можете продивитися приклади програм у розділі математичні криві
+		 (якщо до сих пір не дивилися), або прям після цього тексту знизу. Бажаю успіхів у конкурсі!
+		 </p><br><br>
+		 <h2>Приклади програм</h2>
+		 <h3>Корабель</h3>
+		 <img src="image/ship.png" width="70%" height="50%">
+		 		 <div class="pascal-zag">FreePascal - Ship</div>
+		<table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>uses graph;</b>
+<b>var</b> a,b:<span class="table-wor">integer</span>;
+<b>begin</b>
+a:=detect;
+initgraph(a,b,'');
+line(<span class="table-num">240,40,180,180</span>);
+line(<span class="table-num">180,180,240,200</span>);
+line(<span class="table-num">240,40,240,200</span>);
+line(<span class="table-num">250,40,250,210</span>);
+circle(<span class="table-num">250,35,5</span>);
+ellipse(<span class="table-num">250,60,0,90,45,20</span>);
+ellipse(<span class="table-num">250,60,270,360,45,20</span>);
+ellipse(<span class="table-num">250,150,0,90,70,50</span>);
+ellipse(<span class="table-num">250,150,270,360,70,50</span>);
+line(<span class="table-num">160,210,340,210</span>);
+ellipse(<span class="table-num">220,210,180,270,60,50</span>);
+ellipse(<span class="table-num">140,262,10,90,40,10</span>);
+ellipse(<span class="table-num">200,260,182,358,20,10</span>);
+ellipse(<span class="table-num">250,262,2,178,30,10</span>);
+ellipse(<span class="table-num">300,258,182,358,20,10</span>);
+ellipse(<span class="table-num">345,260,2,178,25,10</span>);
+ellipse(<span class="table-num">280,210,270,360,60,50</span>);
+circle(<span class="table-num">270,230,10</span>);
+<b>readln;</b>
+<b>end.</b>
+				</pre>
+		        </td>
+		   </tr>
+		 </table>
+		 <h3>Терези</h3>
+		 <img src="image/teresi.png" width="60%" height="43%">		 
+		 <div class="pascal-zag">FreePascal - Teresi</div>
+		<table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>uses graph;</b>
+<b>var</b> a,b:<span class="table-wor">integer</span>;
+<b>begin</b>
+a:=detect;
+initgraph(a,b,'');
+setcolor(red);
+rectangle(<span class="table-num">140,360,440,380</span>);
+setfillstyle(red,<span class="table-num">6</span>);
+floodfill(<span class="table-num">290,370</span>,red);
+line(<span class="table-num">200,360,200,340</span>);
+line(<span class="table-num">380,360,380,340</span>);
+ellipse(<span class="table-num">200,260,270,360,60,80</span>);
+ellipse(<span class="table-num">380,260,180,270,60,80</span>);
+ellipse(<span class="table-num">290,260,0,180,30,60</span>);
+setfillstyle(red,<span class="table-num">14</span>);
+floodfill(<span class="table-num">290,260</span>,red);
+line(<span class="table-num">300,202,300,138</span>);
+line(<span class="table-num">280,202,280,138</span>);
+ellipse(<span class="table-num">290,80,0,360,30,60</span>);
+setfillstyle(red,<span class="table-num">14</span>);
+floodfill(<span class="table-num">290,170</span>,red);
+circle(<span class="table-num">290,10,10</span>);
+setfillstyle(red,<span class="table-num">14</span>);
+floodfill(<span class="table-num">299,10</span>,red);
+setfillstyle(red,<span class="table-num">14</span>);
+floodfill(<span class="table-num">290,80</span>,red);
+ellipse(<span class="table-num">320,80,0,93,70,20</span>);
+ellipse(<span class="table-num">320,100,0,90,60,20</span>);
+ellipse(<span class="table-num">440,80,180,270,50,20</span>);
+ellipse(<span class="table-num">440,100,180,270,60,20</span>);
+ellipse(<span class="table-num">500,100,90,180,60,20</span>);
+ellipse(<span class="table-num">500,120,90,180,60,20</span>);
+ellipse(<span class="table-num">440,110,90,270,10,10</span>);
+ellipse(<span class="table-num">500,120,0,90,40,40</span>);
+ellipse(<span class="table-num">500,120,0,90,40,20</span>);
+circle(<span class="table-num">440,110,3</span>);
+setfillstyle(red,<span class="table-num">6</span>);
+floodfill(<span class="table-num">360,80</span>,red);
+setfillstyle(red,<span class="table-num">9</span>);
+floodfill(<span class="table-num">520,100</span>,red);
+ellipse(<span class="table-num">260,80,87,180,60,20</span>);
+ellipse(<span class="table-num">260,100,90,180,60,20</span>);
+ellipse(<span class="table-num">140,80,270,360,60,20</span>);
+ellipse(<span class="table-num">140,100,270,360,60,20</span>);
+ellipse(<span class="table-num">140,110,0,90,10,10</span>);
+ellipse(<span class="table-num">140,110,270,360,10,10</span>);
+ellipse(<span class="table-num">80,100,0,90,60,20</span>);
+ellipse(<span class="table-num">80,120,0,90,60,20</span>);
+ellipse(<span class="table-num">80,120,90,180,40,40</span>);
+ellipse(<span class="table-num">80,120,90,180,40,20</span>);
+circle(<span class="table-num">140,110,3</span>);
+setfillstyle(red,<span class="table-num">6</span>);
+floodfill(<span class="table-num">220,80</span>,red);
+setfillstyle(red,<span class="table-num">9</span>);
+floodfill(<span class="table-num">60,100</span>,red);
+line(<span class="table-num">540,120,540,200</span>);
+line(<span class="table-num">540,120,500,200</span>);
+line(<span class="table-num">540,120,580,200</span>);
+ellipse(<span class="table-num">540,200,180,360,40,40</span>);
+line(<span class="table-num">40,120,40,200</span>);
+line(<span class="table-num">40,120,0,200</span>);
+line(<span class="table-num">40,120,80,200</span>);
+ellipse(<span class="table-num">40,200,180,360,40,40</span>);
+line(<span class="table-num">580,200,500,200</span>);
+line(<span class="table-num">0,200,80,200</span>);
+setfillstyle(red,<span class="table-num">7</span>);
+floodfill(<span class="table-num">40,220</span>,red);
+setfillstyle(red,<span class="table-num">7</span>);
+floodfill(<span class="table-num">540,220</span>,red);
+<b>readln;</b>
+<b>end.</b>
+				</pre>
+		        </td>
+		   </tr>
+		 </table>
+		 <h3>Флюгер</h3>
+		 <img src="image/Fluger.png" width="50%" height="38%">
+		 		 <div class="pascal-zag">FreePascal - Fluger</div>
+		<table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>uses graph;</b>
+<b>var</b> a,b:<span class="table-wor">integer</span>;
+<b>begin</b>
+a:=detect;
+initgraph(a,b,'');
+setcolor(red);
+line(<span class="table-num">80,460,500,460</span>);
+line(<span class="table-num">80,460,180,360</span>);
+line(<span class="table-num">500,460,400,360</span>);
+line(<span class="table-num">180,360,400,360</span>);
+setfillstyle(red,<span class="table-num">6</span>);
+floodfill(<span class="table-num">300,400</span>,red);
+line(<span class="table-num">80,460,50,450</span>);
+line(<span class="table-num">50,450,150,350</span>);
+line(<span class="table-num">150,350,250,350</span>);
+line(<span class="table-num">180,360,150,350</span>);
+line(<span class="table-num">250,350,260,360</span>);
+setfillstyle(red,<span class="table-num">7</span>);
+floodfill(<span class="table-num">80,450</span>,red);
+line(<span class="table-num">400,360,370,350</span>);
+line(<span class="table-num">370,350,320,350</span>);
+line(<span class="table-num">320,350,320,360</span>);
+rectangle(<span class="table-num">260,80,320,360</span>);
+setfillstyle(red,<span class="table-num">6</span>);
+floodfill(<span class="table-num">300,220</span>,red);
+line(<span class="table-num">250,350,250,80</span>);
+line(<span class="table-num">260,80,250,80</span>);
+setfillstyle(red,<span class="table-num">7</span>);
+floodfill(<span class="table-num">255,90</span>,red);
+rectangle(<span class="table-num">260,20,320,40</span>);
+setfillstyle(red,<span class="table-num">6</span>);
+floodfill(<span class="table-num">290,30</span>,red);
+line(<span class="table-num">250,30,250,10</span>);
+line(<span class="table-num">250,10,260,20</span>);
+line(<span class="table-num">250,30,260,40</span>);
+line(<span class="table-num">250,10,310,10</span>);
+line(<span class="table-num">310,10,320,20</span>);
+setfillstyle(red,<span class="table-num">7</span>);
+floodfill(<span class="table-num">255,30</span>,red);
+line(<span class="table-num">360,40,220,40</span>);
+line(<span class="table-num">360,80,220,80</span>);
+line(<span class="table-num">220,40,220,80</span>);
+line(<span class="table-num">360,40,360,0</span>);
+line(<span class="table-num">360,80,360,120</span>);
+line(<span class="table-num">360,0,420,60</span>);
+line(<span class="table-num">360,120,420,60</span>);
+setfillstyle(red,<span class="table-num">10</span>);
+floodfill(<span class="table-num">280,60</span>,red);
+line(<span class="table-num">360,120,350,110</span>);
+line(<span class="table-num">350,110,350,80</span>);
+setfillstyle(red,<span class="table-num">7</span>);
+floodfill(<span class="table-num">355,110</span>,red);
+line(<span class="table-num">360,40,350,30</span>);
+line(<span class="table-num">350,30,350,0</span>);
+line(<span class="table-num">350,0,360,0</span>);
+line(<span class="table-num">350,30,320,30</span>);
+setfillstyle(red,<span class="table-num">7</span>);
+floodfill(<span class="table-num">355,30</span>,red);
+line(<span class="table-num">180,40,180,80</span>);
+ellipse(<span class="table-num">200,40,0,180,20,10</span>);
+ellipse(<span class="table-num">200,80,180,360,20,10</span>);
+settextstyle(<span class="table-num">1,0,4</span>);
+outtextxy(<span class="table-num">187,45</span>,'E');
+setfillstyle(red,<span class="table-num">15</span>);
+floodfill(<span class="table-num">200,60</span>,red);
+line(<span class="table-num">250,30,210,30</span>);
+line(<span class="table-num">170,70,170,30</span>);
+line(<span class="table-num">180,40,170,30</span>);
+line(<span class="table-num">180,80,170,70</span>);
+setfillstyle(red,<span class="table-num">7</span>);
+floodfill(<span class="table-num">175,70</span>,red);
+ellipse(<span class="table-num">190,70,180,270,20,20</span>);
+ellipse(<span class="table-num">198,40,90,160,30,20</span>);
+line(<span class="table-num">198,20,210,30</span>);
+<b>readln;</b>
+<b>end.</b>
+				</pre>
+		        </td>
+		   </tr>
+		 </table>
+		 </article> 
+		   <footer>
+		     &copy; 2016 ProgGeo
+	       </footer>	   
+	</body>
+</html>

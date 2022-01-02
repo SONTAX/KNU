@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Учобовий сайт ProgGeo </title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="javascript.js"></script>
+	</head>
+	<body>
+	   <header>
+	    <ul id="menu">
+                <div class="shapka">	    
+	              <img src="image/1234.jpg" width="24%" height="5%" style="float:left; margin-right:1%;" class="img">				 
+			      <li class="menu"><a href="index.html">Головна</a></li>                                                                                           
+				  <li class="menu"><a href="page-3.html">Уроки Pascal</a></li>
+				  <li class="menu"><a href="page-4.html">Конкурс Перлинка</a></li>	
+                  <li class="menu"><a href="page-2.html">Математичні криві</a></li>
+                  <li class="menu"><a href="page-5.html">Перевір себе</a></li>  				  
+  		       </div>
+			   </ul>	
+	   </header>
+	     <article id="pagetests">
+		 <a href="#top">
+		 <div class="top">Вгору</div>
+		 </a>
+	<h2>Тест для самоперевірки</h2>
+	<p><font color="red">Вказівка</font>: у лівій колонці розташовані процедури, а в правій, що вони створюють. Для кожної процедури є
+	свій особистий блок. Ваше завдання розташувати процедуру у вірний блок(просто перетягніть обрану вами процедуру на своє місце). Правильно
+	поставлений блок стане зеленим, а неправильний червоним. Після тесту зможеш подивитися свій статус. Успіхів!
+	</p>
+	<div style="margin:1%;">
+	<div id="dhtmlgoodies_dragDropContainer">
+	<div id="dhtmlgoodies_listOfItems">
+		<div>
+			<p>Процедура</p>		
+		<ul id="allItems">
+			<li id="node1" groupId="box4">Rectangle();</li>
+			<li id="node2" groupId="box7">Line();</li>
+			<li id="node3" groupId="box1">Ellipse();</li>
+			<li id="node4" groupId="box5">Circle();</li>
+			<li id="node5" groupId="box2">Bar();</li>
+			<li id="node6" groupId="box6">Floodfill();</li>
+			<li id="node7" groupId="box3">OutTextXY();</li>
+			
+			
+		</ul>
+		</div>
+	</div>	
+	<div id="dhtmlgoodies_mainContainer">
+		<!-- ONE <UL> for each "room" -->
+		<div>
+			<p>Дуги</p>
+			<ul id="box1">
+			</ul>
+		</div>
+		<div>		
+			<p>Квадрат</p>
+			<ul id="box2"></ul>
+		</div>
+		<div>
+			<p>Текст в точці</p>
+			<ul id="box3">
+			</ul>
+		</div>
+		<div>
+			<p>Прямокутник</p>
+			<ul id="box4"></ul>
+		</div>
+		<div>	
+			<p>Коло</p>
+			<ul id="box5">
+			</ul>
+		</div>
+		<div>	
+			<p>Контур</p>
+			<ul id="box6">
+			</ul>
+		</div>
+		<div>	
+			<p>Лінія</p>
+			<ul id="box7">
+			</ul>
+		</div>	
+	</div>
+	<div id="saveContent"></div>
+    <div id="right"><img src="image/right.png"></div>
+    </div>
+    <ul id="dragContent"></ul>
+    <div id="dragDropIndicator"><img src="image/insert.gif"></div>
+    <div id="saveContent"></div>
+   	<p>Підрахуй кількість правильних відповідей і побачиш свій статус.<br>
+	Твій <font color="red">статус</font>:<br>
+	0 правильних: Мабуть ти ще навіть не дивився наших уроків<br>
+	1-3 правильних: Погано читаєш матеріал, намагайся спочатку зрозуміти прочитане<br>
+	4 правильних: Дочитуй уроки до кінця, можливо саме там є те, що тобі потрібно<br>
+    5 правильних: Трохи наплутав та все одно молодець<br>
+    6 правильних: Ліньки було ще один блок перетягнути?<br>
+    З'явилася галочка: Ти ще досі тут? Швидко іди працюй над новими програмами	
+	</p>
+	<h2>Тест для самоперевірки</h2>
+	<form name="quiz">
+<p>1. За допомогою якої процедури можна очистити екран у модулі graph, піготувавши його до роботи?</p>
+<ul style="margin-top: 1pt">
+<div class="bloc">
+<li class="test_par"><input type="radio" name="q1" value="ClrSrc"/>ClrSrc</li>
+<li class="test_par"><input type="radio" name="q1" value="ClearDevice"/>ClearDevice</li>
+<li class="test_par"><input type="radio" name="q1" value="Repeat"/>Repeat</li>
+</div>
+</ul>
+
+<p>2. Колір фону можна встановити за допомогою процедури:</p>
+<ul style="margin-top: 1pt">
+<div class="bloc">
+<li class="test_par"><input type="radio" name="q2" value="SetBkColor"/>SetBkColor</li>
+<li class="test_par"><input type="radio" name="q2" value="CloseGraph"/>CloseGraph</li>
+<li class="test_par"><input type="radio" name="q2" value="SetColor"/>SetColor</li>
+</div>
+</ul>
+
+<p>3. Вид штрихування можна встановити за допомогою процедури:</p>
+<ul style="margin-top: 1pt">
+<div class="bloc">
+<li class="test_par"><input type="radio" name="q3" value="SetColor"/>SetColor</li>
+<li class="test_par"><input type="radio" name="q3" value="SetFillStyle"/>SetFillStyle</li>
+<li class="test_par"><input type="radio" name="q3" value="CloseGraph"/>CloseGraph</li>
+</div>
+</ul>
+
+<p>4. Для роботи у графічному режимі необхідно підключити модуль:</p>
+<ul style="margin-top: 1pt">
+<div class="bloc">
+<li class="test_par"><input type="radio" name="q4" value="DOS"/>DOS</li>
+<li class="test_par"><input type="radio" name="q4" value="CRT"/>CRT</li>
+<li class="test_par"><input type="radio" name="q4" value="Graph"/>Graph</li>
+</div>
+</ul>
+
+<p>5. Скільки кольорів можна запрограмувати в Паскалі:</p>
+<ul style="margin-top: 1pt">
+<div class="bloc">
+<li class="test_par"><input type="radio" name="q5" value="15"/>15</li>
+<li class="test_par"><input type="radio" name="q5" value="16"/>16</li>
+<li class="test_par"><input type="radio" name="q5" value="14"/>14</li>
+</div>
+</ul>
+
+<p>6. Процедура для побудови ліній:</p>
+<ul style="margin-top: 1pt">
+<div class="bloc">
+<li class="test_par"><input type="radio" name="q6" value="line"/>Line</li>
+<li class="test_par"><input type="radio" name="q6" value="setline"/>SetLine</li>
+<li class="test_par"><input type="radio" name="q6" value="LineOfXY"/>LineOfXY</li>
+</div>
+</ul>
+
+<p>7. Найменший елемент екрану:</p>
+<ul style="margin-top: 1pt">
+<div class="bloc">
+<li class="test_par"><input type="radio" name="q7" value="Лінія"/>Лінія</li>
+<li class="test_par"><input type="radio" name="q7" value="Точка"/>Точка</li>
+<li class="test_par"><input type="radio" name="q7" value="Прямокутник"/>Прямокутник</li>
+</div>
+</ul>
+<input type="button" class="button button-green" value="Відповітси" onClick="getScore(this.form)"/>
+<p> Кількість балів : <input type="text" size="5" name="percentage"  
+disabled="disabled"/><br/><br/>
+</p>
+</form>
+		 </article> 
+		   <footer>
+		     &copy; 2016 ProgGeo
+	       </footer>	   
+	</body>
+</html>

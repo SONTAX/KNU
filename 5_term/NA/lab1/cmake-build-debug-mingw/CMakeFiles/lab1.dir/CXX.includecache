@@ -1,0 +1,58 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/KNU/5_term/Numerical analysis/lab1/DichotomyMethod.cpp
+DichotomyMethod.h
+E:/KNU/5_term/Numerical analysis/lab1/DichotomyMethod.h
+
+E:/KNU/5_term/Numerical analysis/lab1/DichotomyMethod.h
+TestFunction.h
+E:/KNU/5_term/Numerical analysis/lab1/TestFunction.h
+
+E:/KNU/5_term/Numerical analysis/lab1/NewtonMethod.cpp
+NewtonMethod.h
+E:/KNU/5_term/Numerical analysis/lab1/NewtonMethod.h
+
+E:/KNU/5_term/Numerical analysis/lab1/NewtonMethod.h
+TestFunction.h
+E:/KNU/5_term/Numerical analysis/lab1/TestFunction.h
+
+E:/KNU/5_term/Numerical analysis/lab1/RelaxationMethod.cpp
+RelaxationMethod.h
+E:/KNU/5_term/Numerical analysis/lab1/RelaxationMethod.h
+
+E:/KNU/5_term/Numerical analysis/lab1/RelaxationMethod.h
+TestFunction.h
+E:/KNU/5_term/Numerical analysis/lab1/TestFunction.h
+
+E:/KNU/5_term/Numerical analysis/lab1/TestFunction.cpp
+TestFunction.h
+E:/KNU/5_term/Numerical analysis/lab1/TestFunction.h
+
+E:/KNU/5_term/Numerical analysis/lab1/TestFunction.h
+iostream
+-
+iomanip
+-
+cmath
+-
+thread
+-
+chrono
+-
+string
+-
+
+E:/KNU/5_term/Numerical analysis/lab1/main.cpp
+DichotomyMethod.h
+E:/KNU/5_term/Numerical analysis/lab1/DichotomyMethod.h
+RelaxationMethod.h
+E:/KNU/5_term/Numerical analysis/lab1/RelaxationMethod.h
+NewtonMethod.h
+E:/KNU/5_term/Numerical analysis/lab1/NewtonMethod.h
+

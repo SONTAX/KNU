@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/window_layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".MainActivity"
+              android:background="#29b6f6"
+              android:gravity="center">
+
+
+    <LinearLayout
+            android:id="@+id/game_layout"
+            android:background="@drawable/border"
+            android:layout_width="340dp"
+            android:layout_height="340dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+    </LinearLayout>
+
+    <Space
+            android:layout_width="0dp"
+            android:layout_height="40dp">
+    </Space>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+        <Button
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:text="Start New Game"
+                android:id="@+id/new_game_button"
+                android:layout_gravity="center"
+                android:background="#73e8ff"
+                android:radius="10dp">
+
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

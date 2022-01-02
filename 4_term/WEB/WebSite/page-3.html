@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Учобовий сайт ProgGeo </title>
+		 <link rel="stylesheet" type="text/css" href="style.css">
+				<script src="javascript.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+			<style type="text/css" media="print">
+	div#dhtmlgoodies_listOfItems{
+		display:none;
+	}
+	#dhtmlgoodies_dragDropContainer{
+		border:0px;
+		width:100%;
+	}
+	
+	</style>
+		<script type="text/javascript">
+		$(function() {
+		$('.click').toggle(function(){
+		$(this).siblings(".click-slide").show();  
+		$(this).addClass('change_color');
+		}, function(){
+	   $(this).siblings(".click-slide").hide();  
+		$(this).removeClass('change_color');
+});
+});
+       		$(function() {
+		$('.click1').toggle(function(){
+		$(this).siblings(".click-slide1").show();  
+		$(this).addClass('change_color1');
+		}, function(){
+	   $(this).siblings(".click-slide1").hide();  
+		$(this).removeClass('change_color1');
+});
+});
+		$(function() {
+		$('.click4').toggle(function(){
+		$(this).siblings(".click-slide4").show();  
+		$(this).addClass('change_color2');
+		}, function(){
+	   $(this).siblings(".click-slide4").hide();  
+		$(this).removeClass('change_color2');
+});
+});
+		$(function() {
+		$('.click2').toggle(function(){
+		$(this).siblings(".click-slide2").show();  
+		$(this).addClass('change_color3');
+		}, function(){
+	   $(this).siblings(".click-slide2").hide();  
+		$(this).removeClass('change_color3');
+});
+});
+		$(function() {
+		$('.click3').toggle(function(){
+		$(this).siblings(".click-slide3").show();  
+		$(this).addClass('change_color4');
+		}, function(){
+	   $(this).siblings(".click-slide3").hide();  
+		$(this).removeClass('change_color4');
+});
+});
+
+	</script>
+	</head>
+	<body>
+	   <header>
+	    <ul id="menu">
+                <div class="shapka">	    
+	              <img src="image/1234.jpg" width="24%" height="5%" style="float:left; margin-right:1%;" class="img">				 
+			      <li class="menu"><a href="index.html">Головна</a></li>                                                                                           
+				  <li class="menu"><a href="page-3.html">Уроки Pascal</a></li>
+				  <li class="menu"><a href="page-4.html">Конкурс Перлинка</a></li>	
+                  <li class="menu"><a href="page-2.html">Математичні криві</a></li>
+                  <li class="menu"><a href="page-5.html">Перевір себе</a></li>  				  
+  		       </div>
+			   </ul>	
+	   </header>
+	     <article id="main">
+		 <a href="#top">
+		 <div class="top">Вгору</div>
+		 </a>
+		 <h3>Уроки Pascal</h3>
+		 <p>На цій сторінці ви познайомитесь з модулем <font color="red">GRAPH</font>.</p>
+		 <p><font color="red">Модуль Graph</font> являє собою бібліотеку підпрограм, що забезпечує повне управління графічними режимами різних адаптерів дисплеїв: CGA, EGA, VGA і т.д..<br>
+		 Скачати_______________________________<a href="example/PascalABCNETSetup.exe" class="download"><img src="image/download.png" width="30px" height="30px">PascalABC</a></p>
+		 <p><img src="image/фигура.png" width="26%" height="15%" style="float:right; margin-right:1%;">Беріть і поглиблюйте знання за допомогою наших уроків.
+		 Після чого ви зможете попрактикувати себе у розділі "Завдання".Ця практика знадобиться для участі у <a href="page-4.html" class="giper">конкурсі Перлинка</a>(обов'язково перейдіть 
+		 за посиланням).Бажаю успіхів!<br>         
+		 Скачати_______________________________<a href="example/Free Pascal.exe" class="download"><img src="image/download.png" width="30px" height="30px">FreePascal</a>	
+		 </p>
+		 <h2 class="click">Урок 1</h2>
+		 <div class="click-slide" style="display:none;">
+	     <h2>Алгоритм роботи</h2>
+		 <p>1. Якщо ви вирішили включити графічні фрагменти в програму, то ви зобов'язані після назви програми про це заявити, використовуючи слово <font color="red">USES</font>:
+		 </p>
+		 <div class="pascal-zag">FreePascal - Уроки</div>
+		 <table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>Program</b>  My_program;
+ <b>Uses Graph;</b>
+   ...
+				</pre>
+		        </td>
+		   </tr>
+		 </table>
+		 <p>2.Для роботи вам будуть потрібні дві робочі цілочисельні змінні, які необхідно описати: <font color="red">Var</font> Grmode, Grdriver: </font>integer; можна просто будь-які імена цих змінних, наприклад:</p>
+          <div class="pascal-zag">FreePascal - Уроки</div>
+		 <table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>var</b> A,B:<span class="table-wor">integer</span>;
+				</pre>
+		        </td>
+		   </tr>
+		 </table>  
+         <p>Ці змінні задають драйвер (Grdriver) і режим (Grmode) відповідно до значень відповідними даному драйверу.
+		 </p>
+		 <p>3. Після початку тіла програми, коли ви вирішили, що пора вже і підключитися до графічного модулю, необхідно: а) Вибрати режим автоматичної ідентифікації апаратури, тобто надати компілятору 
+		 самому визначити значення змінної Grdriver, фразою:(дивитися в код нижче) б) ініціювати графічний пакет:(дивитися в код нижче)
+		 </p>
+		  <div class="pascal-zag">FreePascal - Уроки</div>
+		 <table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<span class="table-wor">Grdriver</span>:= Detect;  або <span class="table-wor">А</span>:=Detect;
+<span class="table-wor">InitGraph</span>( Grdriver, Grmode,’’); або <span class="table-wor">InitGraph</span>(a,b,’’);
+				</pre>
+		        </td>
+		   </tr>
+		 </table>
+		 <p>4. Очистимо екран, підготувавши його до роботи, процедурою: <font color="orange">ClearDevice</font>;
+         не плутайте з ClrScr це в модулі CRT!
+		 </p>
+		 <p>5. Пишемо саму програму з усіма графічними фокусами.
+		 </p>
+		 <p>6. Затримка в кінці програми, щоб побачити, що ви навоялі.
+         a) <font color="orange">READLN</font>;
+         b) <font color="orange">repeat</font> until keypressed (Якщо підключений модуль CRT);
+		 </p>
+		 <p>А тепер повний код:
+		 </p>
+		 <div class="pascal-zag">FreePascal - Початок</div>
+		 <table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>uses graph;</b>
+<b>var</b> a,b:<span class="table-wor">integer</span>;
+<b>begin</b>
+a:=detect;
+initgraph(a,b,'');
+<b>...</b>
+<b>readln;</b>
+<b>end.</b>
+				</pre>
+		        </td>
+		   </tr>
+		 </table>
+	     </div>
+		<h2 class="click1">Урок 2</h2>
+		 <div class="click-slide1" style="display:none;">
+	     <h2>Колір</h2>
+		 <p>Можна використовувати 16 кольорів, що може бути застосовано і в
+         модулі CRT, тільки без мерехтіння символу:<img src="image/палитра.gif" width="123px" height="90px" style="float:right; margin-top:1%;">
+		 <ul>
+		<li style="display:block;"><p><font color="black">0 Black чорний</font></p></li>
+        <li style="display:block;"><p><font color="blue">1 Blue синій</font></p></li>
+        <li style="display:block;"><p><font color="green">2 Green зелений</font></p></li>
+        <li style="display:block;"><p><font color="cyan">3 Cyan блакитний</font></p></li>
+        <li style="display:block;"><p><font color="red">4 Red червоний</font></p></li>
+        <li style="display:block;"><p><font color="magenta">5 Magenta фіолетовий</font></p></li>
+        <li style="display:block;"><p><font color="brown">6 Brown коричневий</font></p></li>
+        <li style="display:block;"><p><font color="lightgray">7 LightGray світло-сірий</font></p></li>
+        <li style="display:block;"><p><font color="darkgrey">8 DarkGray темно-сірий</font></p></li>
+        <li style="display:block;"><p><font color="lightblue">9 LightBlue світло-синій</font></p></li>
+        <li style="display:block;"><p><font color="lightgreen">10 LightGreen світло-зелений</font></p></li>
+        <li style="display:block;"><p><font color="#d4d4d4">11 LightCyan світло-блакитний</font></p></li>
+        <li style="display:block;"><p><font color="pink">12 LightRed світло-червоний (рожевий)</font></p></li>
+        <li style="display:block;"><p><font color="lightmagenta">13 LightMagenta світло-фіолетовий</font></p></li>
+        <li style="display:block;"><p><font color="#d9d92c">14 Yellow жовтий</font></p></li>
+        <li style="display:block;"><p>15 White білий</p></li>
+		 </ul>
+		 </p>
+		 <p>Бажано вибрати колір фону, на якому буде ваш малюнок і колір ліній, якими ви малюєте. Це все одно, що вибрати кольоровий аркуш паперу і колір олівця. 
+		 Якщо ви цього не зробите, комп'ютер буде виконувати ваші команди, але тільки білим кольором.
+		 </p>
+		 <p><font color="red">Процедура SetColor(N)</font> - допомагає вибрати колір лінії, олівця або колір контуру фігури. N -натуральне число від 0 до 15.
+		 </p>
+		 <p><font color="red">Процедура SetBKColor(N)</font> - встановлює колір фону (Вибирає колір паперу, на якій будемо малювати).
+		 </p>
+		 <h2>Виводимо лінію на екран</h2>
+		 <p>Що б вивести лінію на екран потрібно знати, де вона починається на екрані і де закінчується, тобто координати початку (x, y) і кінця (X1, y1) майбутньої лінії.
+		 </p>
+	    <div class="pascal-zag">FreePascal - Початок</div>
+		 <table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>Line</b>(x, y, x1,y1); 
+<b>SetLineStyle</b>(N,0,K);   
+				</pre>
+		        </td>
+		   </tr>
+		 </table>
+		 <p>Але, бажано, перед цим вказати колір вашої лінії і можна навіть
+          стиль лінії. Як вказати колір Ви вже в курсі, а от стиль допоможе вибрати процедура <font color = "red"> SetLineStyle. SetLineStyle (N, 0, K); </font> <br>
+                      де N стиль лінії <br>
+                              0 суцільна <br>
+                              1 .............. пунктирна <br>
+                              2 штрих-пунктирна <br>
+                              3 _ _ _ _ _ _ штриховая <br>
+                              К - товщина лінії 1 або 3
+		 </p>
+		 <h2>Виводимо прямокутник</h2>
+		 <p>Якщо взяти кольоровий дріт і зігнути її в вигляді прямокутника, то вийде контур прямокутника. Можна взяти і кольоровий олівець і намалювати контур прямокутника, 
+		 колір контуру відповідає кольору взятого олівця. Але можна взяти і кольоровий аркуш паперу і вирізати з нього кольоровий прямокутник, або пензликом, мокнув в фарбу, 
+		 намалювати, наприклад, жовтенький прямокутник. У цих прямокутників контуру немає! Отримали два види прямокутників: з контуром і без контуру.
+		 </p>
+		 <p>Процедура <font color = "red">Rectangle</font> малює контур прямокутника. Для відновлення прямокутника досить знати координати будь-якої діагоналі.
+		 </p>
+		 
+		 <div class="pascal-zag">FreePascal - Початок</div>
+		 <table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>Rectangle</b>(x,y,x1,y1);
+<b>Bar</b>(x,y,x1,y1);          
+				</pre>
+		        </td>
+		   </tr>
+		 </table>
+		 <img src="image/rectangle.gif" style="float:left; margin-top:1%;">
+		 <p style="float:left;">Процедура <font color = "red">BAR</font> малює заповнений прямокутник без контуру. Перед виконанням даної процедури бажано вибрати колір і стиль контуру.
+		 </p>
+		 <p style="float:left;">Стиль і колір заповнення задаються заздалегідь процедурами <font color = "red">SetFillStyle, SetFillPattern</font>.
+		 </p>
+	     </div>
+		 <h2 class="click2">Урок 3</h2>
+		 <div class="click-slide2" style="display:none;">
+	     <h2>Коло, еліпс, дуги</h2>
+		 <p>Багато не намалюєш тільки з ліній і прямокутників, хочеться закруглити деякі штрихи. Будемо вчитися малювати більш складні фігури з кіл, еліпсів і дуг. Почнемо 
+		 з кіл. Наприклад, ви хочете намалювати сонце. Потрібно взяти "інструмент" для малювання кіл - циркуль, вибрати місце на екрані, де буде сонце, тобто координати центру 
+		 кола або куди Ви б поставили голку циркуля, і звичайно, підібрати розміри Вашого сонечка - радіус кола або відстань між ніжками циркуля.
+		 </p>
+		 <p>Ясно, що циркулем на екрані малювати нерозумно, тому роль "інструмента" буде виконувати процедура <font color = "red">CIRCLE</font> (майже -що циркуль).</p>  
+         <p>де (х, у) - координати центру кола; R - радіус.
+		 </p>
+		 <div class="pascal-zag">FreePascal - Початок</div>
+		 <table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>Circle</b>(x, y, R);     
+				</pre>
+		        </td>
+		   </tr>
+		 </table>
+		 <img src="image/круг.jpg" style="float:left;" width="143px" height="162px">
+         <p>Якщо ж ви хочете намалювати повітряну кульку, то її форма буде більше нагадувати овал, еліпс. Ви, звичайно, згодні з тим, що знову вам необхідно знати 
+		 координати центру кульки і ще його розміри від центру в двох напрямках - по ширині і по довжині. "Інструментом" стане вже інша процедура <font color = "red">ELLIPSE</font> і крім тих даних, 
+		 про які ми говорили, додадуться нові - застосування яких більш ясно стане трохи пізніше.
+         </p>
+		 <div class="pascal-zag">FreePascal - Початок</div>
+		 <table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>Ellipse</b>(x, y, 0, 360, Rx, Ry);                                                      
+				</pre>
+		        </td>
+		   </tr>
+		 </table>
+		 <img src="image/овал.jpg" style="float:left;" width="360px" height="200px">
+         <p>где (х,у) - координаты цента; Rx - расстояние  от центра до контура по оси Х, Ry- расстояние  от центра до контура по оси Y; после координат центра  будут стоять 
+		 два числа, соответствующие началу  и концу дуги контура, т.к. у нас эллипс не имеет ни того ни другого, то поставим числа 0 и 360. 
+         </p>	
+         <p>Залишилося розібратися c малюванням дуг, адже більшість малюнків складаються саме з дуг. Дуги можуть бути частиною окружності і частиною еліпса. "Інструментом" 
+		 виконує малювання дуги від окружності є процедура <font color = "red">ARC</font> і від еліпса процедура вже знайома <font color = "red">Ellipse</font>.У Турбо Паскалі малювання кіл, еліпсів і дуг відбувається проти 
+		 годинникової стрілки - це необхідно твердо пам'ятати для визначення початку і кінця дуги!
+         </p>
+		 <div class="pascal-zag">FreePascal - Початок</div>
+		 <table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>Ellipse</b>(x,y, нач_дуги, кон_дуги, Rx, Ry);                                                         
+				</pre>
+		        </td>
+		   </tr>
+		 </table>
+         <h2>Заповнення контуру</h2>	
+         <p>Ми заговорили про заповнення, але як це робиться?
+       Для того, щоб зафарбувати який-небудь контур необхідно:
+         1) вибрати стиль і колір заливки контуру,
+             використовуючи процедуру <font color = "red">SetFillStyle (N, колір)</font>
+                    де N стиль заповнення<br>
+                           0 кольором фону<br>
+                           1 заданим кольором<br>
+                           2 в горизонтальну смужку<br>
+                           3 //////// тонка<br>
+                           4 //////// жирна<br>
+                           5 \\\\\\\ жирна<br>
+                           6 \\\\\\\ тонка<br>
+                           7 в клітку<br>
+                           8 в похилу клітку<br>
+                           9 в густу похилу клітку<br>
+                           10 рідко розташовані точки<br>
+                           11 часто розташовані точки<br>
+                           12 призначений для користувача стиль
+         </p>
+         <p>2) а потім "залити" даний контур процедурою <font color = "red">FloodFill(x, y, цвет_контура)</font> де (х, у) будь-яка точка належить контуру, причому контур не повинен мати точок розриву 
+		 і має складатися з ліній або дуг одного кольору
+         </p>
+		 <div class="pascal-zag">FreePascal - Початок</div>
+		 <table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>SetFillStyle</b>(N, колір);
+<b>FloodFill</b>(x, y, цвет_контура);                                                         
+				</pre>
+		        </td>
+		   </tr>
+		 </table>		 
+	     </div>
+		 <h2 class="click3">Урок 4</h2>
+		 <div class="click-slide3" style="display:none;">
+	     <h3>Виведення тексту на екран</h3>
+		 <p>Виконуючи різноманітні малюнки, вам також знадобиться і виводити різні написи під ними або просто супроводжуючий до них текст. Розумничка Турбо Паскаль, і тут він 
+		 на висоті, про все подумав!Процедура <font color = "red">OutText</font> виводить текст в поточну позицію, а процедура <font color = "red">OutTextXY</font> в конкретне місце графічного екрану з точністю до точки!
+		 </p>
+		 <div class="pascal-zag">FreePascal - Початок</div>
+		 <table class="pascal">
+		   <tr>
+		        <td style="padding-left:0px;">
+				<pre class="pre2">
+<b>OutText</b>(‘ Ваш_текст’);            
+<b>OutTextXY</b>(x,y,’Ваш_текст’);                                                       
+				</pre>
+		        </td>
+		   </tr>
+		 </table>
+		 <p>Виводити текст звичайним шрифтом не цікаво! Дуже хочеться чогось незвичайного! Ефектного! Будь ласка, вам надає Паскаль право вибрати не тільки шрифт, а й розмір 
+		 букв. Процедура <font color = "red">SetTextStyle</font> надає нам можливість вибрати шрифт, положення виведення тексту на екрані (горизонтально, вертикально або горизонтально з вертикальним 
+		 поворотом кожної літери) і розмір.<br>
+         <font color = "red">SetTextStyle</font> (номер_шр, положення, увеліченіе_шріфта)<br>
+         номер шрифту може бути:<br>
+ 0 - матричний шрифт 8х8 (Binary);<br>
+    1 - звичайний напівжирний шрифт (Triplex);<br>
+       2 - тонкий шрифт (Small);<br>
+          3 рубаний шрифт (SansSerif);<br>
+             4-готичний шрифт (Gothic);
+		 </p>
+		 <p>Положення тексту:<br>
+           0 - горизонтальний звичайний висновок "текст";<br>
+           1 -вертикальний висновок від низу до верху;<br>
+           2 - горизонтальний висновок, але кожна буква повернута на 90 градусів<br>
+            Збільшення шрифту:<br>
+            для 0 від 1 до 31; для 1 - не діє;<br>
+            для інших аналогічно 0.<br>
+          Без підключення шрифтів можна працювати з номерами 0 і 1,
+          всі інші повинні бути підключені.
+		 </p>
+	     </div>
+		 <h2 class="click4">Завдання</h2>
+		 <div class="click-slide4" style="display:none;">
+		 <h2>Завдання</h2>
+		 <p>Ось вам малюнки на опрацювання. Структуру роботи (перед тим, як писати саму програму) на сторінці "Конкурс Перлинка". Дивіться міні інструкцію під назвою "Вказівка". Там же знаходяться й інші 
+		 завдання.
+		 </p>
+		 <img src="image/Приклад.png" style="margin-top:3%;">
+		 <img src="image/Приклад1.png" style="margin-top:3%;">
+		 </div>
+         <p>Впевнений у собі? Тоді переходь на сторінку <font color = "red">"Перевір себе"</font>.<br>
+		 Дізнайся, як гарно ті засвойв матеріал.
+         </p>		 
+		 </article> 
+		   <footer>
+		     &copy; 2016 ProgGeo
+	       </footer>	   	   
+	</body>
+</html>

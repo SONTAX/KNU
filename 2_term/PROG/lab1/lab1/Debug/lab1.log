@@ -1,0 +1,5 @@
+﻿  lab1.cpp
+D:\c++\2_term\lab1\lab1\lab1.cpp(410,75): warning C4018: <: несоответствие типов со знаком и без знака
+D:\c++\2_term\lab1\lab1\lab1.cpp(471,75): warning C4018: <: несоответствие типов со знаком и без знака
+D:\c++\2_term\lab1\lab1\lab1.cpp(599,23): warning C4018: <: несоответствие типов со знаком и без знака
+  lab1.vcxproj -> D:\c++\2_term\lab1\Debug\lab1.exe
