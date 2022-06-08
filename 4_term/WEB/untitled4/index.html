@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Shop</title>
+</head>
+
+<body>
+<div class="container">
+  <div class="wrapper">
+    <div class="inner">
+      <span>Bank</span>
+      <hr />
+      <div class="title-block">
+        <img src="icons/icons8-money-100.png" alt="money" />
+        <label>Balance</label>
+      </div>
+      <input type="text" id="money" disabled />
+      <span>Products</span>
+      <hr />
+      <div class="title-block">
+        <img src="icons/icons8-beer-100.png" alt="beer" />
+        <label>Beer</label>
+      </div>
+      <input type="text" class="product-beer" disabled data-name="beer" />
+      <div class="title-block">
+        <img src="icons/icons8-soda-100.png" alt="pepsi" />
+        <label>Pepsi</label>
+      </div>
+      <input type="text" class="product-pepsi" disabled data-name="pepsi" />
+      <div class="title-block">
+        <img src="icons/icons8-nachos-80.png" alt="chips" />
+        <label>Chips</label>
+      </div>
+      <input type="text" class="product-chips" disabled data-name="chips" />
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="inner">
+      <span>Basket</span>
+      <hr />
+      <div class="title-block">
+        <img src="icons/icons8-countdown-80.png" alt="count" />
+        <label>Quantity of goods</label>
+      </div>
+      <input type="number" min="1" id="buyProducts" placeholder="Enter the quantity of goods..." />
+      <div class="center">
+        <div class="radio-group">
+          <input type="radio" name="products" value="beer" id="test1" checked />
+          <label for="test1">Beer</label>
+          <input type="radio" name="products" value="pepsi" id="test2" />
+          <label for="test2">Pepsi</label>
+          <input type="radio" name="products" value="chips" id="test3" />
+          <label for="test3">Chips</label>
+        </div>
+        <button class="btn-add">Add</button>
+      </div>
+      <textarea name="textareaBasket" id="textArea" cols="30" rows="5" disabled></textarea>
+      <div class="center">
+        <button class="btn-buy">Buy</button>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="inner">
+      <span>Receipt</span>
+      <hr />
+      <textarea id="shop-check" cols="30" rows="5" disabled></textarea>
+    </div>
+  </div>
+</div>
+
+<!-- modal  -->
+<div id="modal" class="myModal">
+  <div class="modal-content">
+    <div id="close" data-close>&times;</div>
+    <div class="modal-header">
+      <h2>Message</h2>
+    </div>
+    <div class="modal-body">
+      <img class="warning-icon" src="icons/icons8-warning-96.png" alt="">
+      <p>Incorrect product calculation or its quantity not entered!</p>
+    </div>
+  </div>
+</div>
+
+
+<script src="script/script.js" type="module"></script>
+<script src="script/shop.js" type="module"></script>
+</body>
+
+</html>

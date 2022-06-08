@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <script>
+        function plus(){
+            let a = Number(document.getElementById('first').value);
+            let b = Number(document.getElementById('second').value);
+            if(isNaN(a) || isNaN(b)){
+                alert("Одне з полів не є числом!");
+            }
+            else{
+                let res = a + b;
+                let out = document.createElement("input");
+                out.id="third";
+                out.type = "text";
+                out.value = String(res);
+                document.getElementById("main").appendChild(out);
+            }
+        }
+        function minus(){
+            let a = Number(document.getElementById('first').value);
+            let b = Number(document.getElementById('second').value);
+            if(isNaN(a) || isNaN(b)){
+                alert("Одне з полів не є числом!");
+            }
+            else{
+                let res = a - b;
+                let out = document.createElement("input");
+                out.id="third";
+                out.type = "text";
+                out.value = String(res);
+                document.getElementById("main").appendChild(out);
+            }
+        }
+        function mult(){
+            let a = Number(document.getElementById('first').value);
+            let b = Number(document.getElementById('second').value);
+            if(isNaN(a) || isNaN(b)){
+                alert("Одне з полів не є числом!");
+            }
+            else if(a!==Number("") && b!==Number("")){
+                let res = a * b;
+                let out = document.createElement("input");
+                out.id="third";
+                out.type = "text";
+                out.value = String(res);
+                document.getElementById("main").appendChild(out);
+            }
+        }
+        function div(){
+            let a = Number(document.getElementById('first').value);
+            let b = Number(document.getElementById('second').value);
+            if(isNaN(a) || isNaN(b)){
+                alert("Одне з полів не є числом!");
+            }
+            else{
+                let res = a / b;
+                let out = document.createElement("input");
+                out.id="third";
+                out.type = "text";
+                out.value = String(res);
+                document.getElementById("main").appendChild(out);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="main">
+        <div onclick="plus()" style="background-color: beige;">+</div>
+        <br>
+        <div onclick="minus()" style="background-color: beige;">-</div>
+        <br>
+        <div onclick="mult()" style="background-color: beige;">*</div>
+        <br>
+        <div onclick="div()" style="background-color: beige;">/</div>
+        <br>
+        <label for="first">Перше число: </label>
+        <input type="text" id="first">
+        <label for="second">Друге число: </label>
+        <input type="text" id="second">
+    </div>
+</body>
+</html>

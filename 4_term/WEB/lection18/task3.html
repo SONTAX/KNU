@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        #calc{
+            width: 20%;
+            position: absolute;
+            left: 40%;
+            background-color: darkgray;
+            border-radius: 15px;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+        #output{
+            width: 95%;
+        }
+    </style>
+    <script>
+        let first = 0;
+        let second = 1;
+        let operation = "";
+        let is_operation_first = true;
+        window.onload = init;
+
+        function init(){
+            document.getElementById("output").value = "";
+            let btnBox = document.querySelectorAll(".calcBtn");
+            for (let i = 0; i < btnBox.length; i++){
+                btnBox[i].onclick = test;
+            }
+        }
+
+        function calculus(oper){
+            let result;
+            switch (oper){
+                case "del":{
+                    result = first / second;
+                    document.getElementById("output").value = result;
+                    first = 0;
+                    second = 1;
+                    break;
+                }
+                case "ost":{
+                    result = first % second;
+                    document.getElementById("output").value = result;
+                    first = 0;
+                    second = 1;
+                    break;
+                }
+                case "mult":{
+                    result = first * second;
+                    document.getElementById("output").value = result;
+                    first = 0;
+                    second = 1;
+                    break;
+                }
+                case "pow":{
+                    result = Math.pow(first, second);
+                    document.getElementById("output").value = result;
+                    first = 0;
+                    second = 1;
+                    break;
+                }
+                case "plus":{
+                    result = first + second;
+                    document.getElementById("output").value = String(result);
+                    first = 0;
+                    second = 1;
+                    break;
+                }
+                case "minus":{
+                    result = first - second;
+                    document.getElementById("output").value = result;
+                    first = 0;
+                    second = 1;
+                    break;
+                }
+            }
+        }
+
+        function test(e){
+            let val = this.value;
+            switch (val){
+                case "1":{
+                    document.getElementById("output").value += "1";
+                    break;
+                }
+                case "2":{
+                    document.getElementById("output").value += "2";
+                    break;
+                }
+                case "3":{
+                    document.getElementById("output").value += "3";
+                    break;
+                }
+                case "4":{
+                    document.getElementById("output").value += "4";
+                    break;
+                }
+                case "5":{
+                    document.getElementById("output").value += "5";
+                    break;
+                }
+                case "6":{
+                    document.getElementById("output").value += "6";
+                    break;
+                }
+                case "7":{
+                    document.getElementById("output").value += "7";
+                    break;
+                }
+                case "8":{
+                    document.getElementById("output").value += "8";
+                    break;
+                }
+                case "9":{
+                    document.getElementById("output").value += "9";
+                    break;
+                }
+                case "0":{
+                    document.getElementById("output").value += "0";
+                    break;
+                }
+                case "c":{
+                    document.getElementById("output").value = "";
+                    first = 0;
+                    second = 1;
+                    operation = "";
+                    is_operation_first = true;
+                    break;
+                }
+                case "res":{
+                    second = Number(document.getElementById("output").value);
+                    calculus(operation);
+                    operation = "";
+                    first = 0;
+                    second = 1;
+                    break;
+                }
+                case "plus":{
+                    first = Number(document.getElementById("output").value);
+                    if(operation !== ""){
+                        second = Number(document.getElementById("output").value);
+                        calculus(operation);
+                        first = Number(document.getElementById("output").value);
+                    }
+                    operation = "plus";
+                    document.getElementById("output").value = "";
+                    break;
+                }
+                case "minus":{
+                    first = Number(document.getElementById("output").value);
+                    if(operation !== ""){
+                        second = Number(document.getElementById("output").value);
+                        calculus(operation);
+                        first = Number(document.getElementById("output").value);
+                    }
+                    operation = "minus";
+                    document.getElementById("output").value = "";
+                    break;
+                }
+                case "mult":{
+                    first = Number(document.getElementById("output").value);
+                    if(operation !== ""){
+                        second = Number(document.getElementById("output").value);
+                        calculus(operation);
+                        first = Number(document.getElementById("output").value);
+                    }
+                    operation = "mult";
+                    document.getElementById("output").value = "";
+                    break;
+                }
+                case "ost":{
+                    first = Number(document.getElementById("output").value);
+                    if(operation !== ""){
+                        second = Number(document.getElementById("output").value);
+                        calculus(operation);
+                        first = Number(document.getElementById("output").value);
+                    }
+                    operation = "ost";
+                    document.getElementById("output").value = "";
+                    break;
+                }
+                case "pow":{
+                    first = Number(document.getElementById("output").value);
+                    if(operation !== ""){
+                        second = Number(document.getElementById("output").value);
+                        calculus(operation);
+                        first = Number(document.getElementById("output").value);
+                    }
+                    operation = "pow";
+                    document.getElementById("output").value = "";
+                    break;
+                }
+                case "sqrt":{
+                    first = Number(document.getElementById("output").value);
+                    document.getElementById("output").value = String(Math.sqrt(first));
+                    break;
+                }
+                case "del":{
+                    first = Number(document.getElementById("output").value);
+                    if(operation !== ""){
+                        second = Number(document.getElementById("output").value);
+                        calculus(operation);
+                        first = Number(document.getElementById("output").value);
+                    }
+                    operation = "del";
+                    document.getElementById("output").value = "";
+                    break;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="calc">
+        <input id="output" type="text" readonly>
+        <button class="calcBtn" value="1">1</button>
+        <button class="calcBtn" value="2">2</button>
+        <button class="calcBtn" value="3">3</button>
+        <button class="calcBtn" value="4">4</button>
+        <button class="calcBtn" value="5">5</button>
+        <button class="calcBtn" value="6">6</button>
+        <button class="calcBtn" value="7">7</button>
+        <button class="calcBtn" value="8">8</button>
+        <button class="calcBtn" value="9">9</button>
+        <button class="calcBtn" value="0">0</button>
+        <button class="calcBtn" value="c">C</button>
+        <button class="calcBtn" value="del">/</button>
+        <button class="calcBtn" value="ost">%</button>
+        <button class="calcBtn" value="mult">*</button>
+        <button class="calcBtn" value="pow">^</button>
+        <button class="calcBtn" value="plus">+</button>
+        <button class="calcBtn" value="minus">-</button>
+        <button class="calcBtn" value="res">=</button>
+        <button class="calcBtn" value="sqrt">√</button>
+    </div>
+</body>
+</html>

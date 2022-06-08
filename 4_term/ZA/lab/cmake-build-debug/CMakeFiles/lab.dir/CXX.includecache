@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/niche/1/KNU/4_term/ZA/lab/LongNumber.hpp
+vector
+-
+cmath
+-
+string
+-
+stdexcept
+-
+tuple
+-
+cstdint
+-
+functional
+-
+LongNumber.inl
+C:/Users/niche/1/KNU/4_term/ZA/lab/LongNumber.inl
+
+C:/Users/niche/1/KNU/4_term/ZA/lab/LongNumber.inl
+limits
+-
+
+C:/Users/niche/1/KNU/4_term/ZA/lab/main.cpp
+iostream
+-
+LongNumber.hpp
+C:/Users/niche/1/KNU/4_term/ZA/lab/LongNumber.hpp
+

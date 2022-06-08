@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Семінар 8</title>
+    <style>
+        form{
+            width: 50%;
+            margin-left: 25%;
+            border: 1px solid darkgray;
+            padding: 15px;
+            border-radius: 15px;
+        }
+        img{
+            float: left;
+            margin-right: 10px;
+            height: 132px;
+        }
+        #c_img{
+            height: 40px;
+            float: left;
+        }
+        li{
+            width: 80%;
+        }
+        #s1{
+            text-align: center;
+        }
+    </style>
+    <script>
+        function del(){
+            let to_del = document.getElementById("s2");
+            document.getElementById("frm").removeChild(to_del);
+        }
+        function sum(){
+            let res = 0;
+            let a = document.getElementById("sight_1");
+            let b = document.getElementById("sight_2");
+            let c = document.getElementById("sight_3");
+            if (a.checked){
+                res += Number(a.value);
+            }
+            if (b.checked){
+                res += Number(b.value);
+            }
+            if (c.checked){
+                res += Number(c.value);
+            }
+            switch (document.getElementById("country").value){
+                case "c1": {
+                    res += 500;
+                    break;
+                }
+                case "c2": {
+                    res += 400;
+                    break;
+                }
+                case "c3": {
+                    res += 300;
+                    break;
+                }
+                case "c4": {
+                    res += 200;
+                    break;
+                }
+                case "c5": {
+                    res += 100;
+                    break;
+                }
+            }
+            alert("Загальна вартість подорожі — " + res + "₴");
+        }
+        function add_country_info(){
+            let country_id = document.getElementById("country").value;
+            let wrapper = document.createElement("section");
+            wrapper.id = "s2";
+            let header = document.createElement("h2");
+            let p1 = document.createElement("p");
+            let p2 = document.createElement("p");
+            let p3 = document.createElement("p");
+            let p4 = document.createElement("p");
+            let p5 = document.createElement("p");
+            let p6 = document.createElement("p");
+            let p7 = document.createElement("p");
+            let p8 = document.createElement("p");
+            let flag = document.createElement("img");
+            flag.id = "c_img";
+            let under_header = document.createElement("h3");
+            under_header.textContent = 'Основні історичні пам\'ятки';
+            let list = document.createElement("ul");
+            let item_1 = document.createElement("li");
+            let item_2 = document.createElement("li");
+            let item_3 = document.createElement("li");
+            let h4_1 = document.createElement("h4");
+            let h4_2 = document.createElement("h4");
+            let h4_3 = document.createElement("h4");
+            let img1 = document.createElement("img");
+            let img2 = document.createElement("img");
+            let img3 = document.createElement("img");
+            let h3_1 = document.createElement("h3");
+            h3_1.textContent = 'Оберіть пам\'ятки, які бажаєте відвідати';
+            let p9 = document.createElement("p");
+            let label_1 = document.createElement("label");
+            let input_1 = document.createElement("input");
+            let p10 = document.createElement("p");
+            let label_2 = document.createElement("label");
+            let input_2 = document.createElement("input");
+            let p11 = document.createElement("p");
+            let label_3 = document.createElement("label");
+            let input_3 = document.createElement("input");
+            let button_1 = document.createElement("button");
+            input_1.type = "checkbox";
+            input_1.id = "sight_1";
+            input_2.type = "checkbox";
+            input_2.id = "sight_2";
+            input_3.type = "checkbox";
+            input_3.id = "sight_3";
+            button_1.type = "button";
+            button_1.value = "sum";
+            button_1.textContent = 'Обрахувати вартість поїздки';
+            button_1.id = "sum_button";
+            button_1.onclick = sum;
+            switch (country_id){
+                case "c1":{
+                    header.textContent = 'Німеччина';
+                    flag.src = "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg";
+                    p2.textContent = 'Німеччина — країна в Центральній Європі, демократична федеративна республіка. Вартість квитка: 500₴.';
+                    h4_1.textContent = 'Рейхстаг';
+                    img1.src = "https://architectureguru.ru/wp-content/uploads/2019/09/reichstag-building-in-berlin-1.jpg";
+                    h4_2.textContent = 'Берлінський мур';
+                    img2.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Berlinermauer.jpg/300px-Berlinermauer.jpg";
+                    h4_3.textContent = 'Боденське озеро';
+                    img3.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Bodensee_satellit.jpg/1200px-Bodensee_satellit.jpg";
+                    p4.textContent = 'Його звели на березі річки Шпрее в Берліні для парламенту Німецької імперії.\n' +
+                        '                    Останню цеглину в будівництві Рейхстагу (Reichstag) поклали 5 грудня 1894-го року.\n' +
+                        '                    Після возз\'єднання країни та реконструкції в 1999 році будівля стала частиною\n' +
+                        '                    парламентського комплексу Бундестагу - федерального парламенту Німеччини. Туристи\n' +
+                        '                    можуть відвідати скляний купол з оглядовим майданчиком.\n' +
+                        '                    Вартість квитка: 300₴.';
+                    p6.textContent = 'Комплекс споруд між двома частинами Берліна, зведений за наказом державного керівництва\n' +
+                        '                    СРСР від 13 серпня 1961. Проіснував до 9 листопада 1989, протягом понад 28 років його\n' +
+                        '                    багато разів добудовували й розширювали, був найбільш укріпленою частиною\n' +
+                        '                    «німецько-німецького» кордону, відокремлював Західний Берлін від Східного й навколишніх\n' +
+                        '                    районів НДР. Мур був одним із найвідоміших символів Холодної війни та поділу Німеччини.\n' +
+                        '                    Вартість квитка: 500₴.';
+                    p8.textContent = 'Боденське озеро розкинулось в альпійському передгір\'ї на кордоні Німеччини,\n' +
+                        '                    Австрії та Швейцарії. Серед його пам\'яток особливо популярними є квітковий острів Майнау,\n' +
+                        '                    зі списку Світової спадщини, монастирський острів Райхенау, міста\n' +
+                        '                    Ліндау і Констанц, а також замок Меерсбурґ.\n' +
+                        '                    Вартість квитка: 1000₴.';
+                    input_1.value = "300";
+                    input_2.value = "500";
+                    input_3.value = "1000";
+                    label_1.textContent = 'Рейхстаг';
+                    label_2.textContent = 'Берлінський мур';
+                    label_3.textContent = 'Боденське озеро';
+                    break;
+                }
+                case "c2":{
+                    header.textContent = 'Франція';
+                    flag.src = "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg";
+                    p2.textContent = 'Франція — держава, територія якої складається з метрополії у Західній Європі та низки заморських володінь. Вартість квитка: 400₴.';
+                    h4_1.textContent = 'Нотр-Дам-де-Парі';
+                    img1.src = "https://m.buro247.ua/images/2019/04/notre-dame-rebuilding-1.jpg";
+                    h4_2.textContent = 'Ейфелева Вежа';
+                    img2.src = "https://fr.igotoworld.com/frontend/webcontent/websites/26/images/attractions/Eiffel-Tower/673_800x600_eiffel-tower.jpg";
+                    h4_3.textContent = 'Палац Версаль';
+                    img3.src = "https://wantsee.world/wp-content/uploads/2019/04/Palace-of-Versailles-France.jpg";
+                    p4.textContent = 'Собор Паризької Богоматері недарма вважають одним з найпрекрасніших прикладів французької\n' +
+                        '                    Готичної архітектури у Франції і в Європі. Пішло два століття, щоб побудувати це диво архітектури та\n' +
+                        '                    одну з найзнаменитіших Паризьких пам’яток. Фотографії цього собору не віддають йому належне, Собор Паризької\n' +
+                        '                    Богоматері варто обов’язково побачити своїми очима. Рівень деталей, поміщених в скульптури, просто фантастичний.\n' +
+                        '                    Вартість квитка: 404₴.';
+                    p6.textContent = 'Одна з найбільш розпізнаваних структур у світі і символ Франції. Якщо Ви не підніметеся на\n' +
+                        '                    Ейфелеву вежу перебуваючи в Парижі, то втратите дійсно особливий момент у своєму житті. Розмір залізної\n' +
+                        '                    вежі величезний. Перебуваючи під основою вежі важко повірити в ці гігантські пропорції, на фотографіях\n' +
+                        '                    неможливо відчути всю велич і красу цієї структури. Ця пам’ятка Парижа обов’язкова для перегляду.\n' +
+                        '                    Вартість квитка: 399₴.';
+                    p8.textContent = 'Коли був побудований, Версаль став мисливської резиденцією короля. Сьогодні, однак, це – передмістя Парижа, приблизно\n' +
+                        '                    в двадцяти кілометрах на північний захід від французької столиці. Версаль був центром політичної влади у Франції з 1682, коли Луї\n' +
+                        '                    XIV перемістився сюди з Парижа, поки королівська родина не була змушена повернутися до столиці жовтні 1789, з початку Французької\n' +
+                        '                    революції. Тому Версаль відомий не тільки як будівля, а й як символ системи абсолютної монархії.\n' +
+                        '                    Вартість квитка: 777₴.';
+                    input_1.value = "404";
+                    input_2.value = "399";
+                    input_3.value = "777";
+                    label_1.textContent = 'Нотр-Дам-де-Парі';
+                    label_2.textContent = 'Ейфелева Вежа';
+                    label_3.textContent = 'Палац Версаль';
+                    break;
+                }
+                case "c3":{
+                    header.textContent = 'Нідерланди';
+                    flag.src = "https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg";
+                    p2.textContent = 'Нідерланди — країна в Західній Європі на березі Північного моря. Складається з 12 провінцій. Вартість квитка: 300₴.';
+                    h4_1.textContent = 'Вітряки Кіндердайк';
+                    img1.src = "https://upload.wikimedia.org/wikipedia/commons/b/b2/Kinderdijk_-_Molen_Nederwaard_8.jpg";
+                    h4_2.textContent = 'Канали Амстердама';
+                    img2.src = "https://tour-pronl.com/wp-content/uploads/2019/03/s1200-min-1.jpg";
+                    h4_3.textContent = 'Національний парк Де-Хоге-Велюве';
+                    img3.src = "https://pizzatravel.com.ua/uploads/2019/33696.jpg";
+                    p4.textContent = 'Одним з головних символів Нідерландів є вітряні млини. Найбільша їх кількість розташована у селі Кіндердайк\n' +
+                        '                    недалеко від Роттердама. Сьогодні туристи можуть помилуватися 19-ю вітряними млинами, побудованими ще у XVIII столітті\n' +
+                        '                    для осушення болотистих ділянок суші. Сьогодні старовинні млини включені в список Всесвітньої спадщини ЮНЕСКО, в один з\n' +
+                        '                    них можна увійти і познайомитися з її химерним пристроєм.\n' +
+                        '                    Вартість квитка: 645₴.';
+                    p6.textContent = 'Канали Амстердама є одними з найдивовижніших пам\'яток міста, які надають йому особливо чарівність. Зараз існує чотири канали,\n' +
+                        '                    які концентричними півкільцями опоясують Старе місто. Завдяки наявності каналів Амстердам прозвали \"Північною Венецією\". Першим каналом\n' +
+                        '                    Амстердама став Сінгел, що оточував місто в Середньовіччі. Другим серед чотирьох основних каналів Амстердама став Херенграхт, за яким\n' +
+                        '                    послідувало будівництво Кейзерсграхт і Принсенграхт - найдовшого з усіх каналів Амстердама. Потім прорили ще кілька додаткових каналів. Всі\n' +
+                        '                    канали Амстердама внесено до списку об\'єктів Всесвітньої спадщини ЮНЕСКО і вони славляться великою кількістю цікавих пам\'яток.\n' +
+                        '                    Вартість квитка: 322₴.';
+                    p8.textContent = 'Найбільшою природною пам\'яткою Нідерландів є Національний парк Де-Хоге-Велюве. Він був створений на початку ХХ століття подружньою\n' +
+                        '                    парою Креллер-Мюллер. Парк розташований в частині рівнини Велюве і складається з трьох типів природних зон: відкритих пісків, вересових пусток і\n' +
+                        '                    хвойного лісу. На території Де Хоге Велюве є свій музей і мисливський будиночок, побудований в 1915-му році архітектором Берлаге. Вхід на\n' +
+                        '                    територію парку платний, парком можна проїхатися на своєму автомобілі або ж орендувати велосипед.\n' +
+                        '                    Вартість квитка: 700₴.';
+                    input_1.value = "645";
+                    input_2.value = "322";
+                    input_3.value = "700";
+                    label_1.textContent = 'Вітряки Кіндердайк';
+                    label_2.textContent = 'Канали Амстердама';
+                    label_3.textContent = 'Національний парк Де-Хоге-Велюве';
+                    break;
+                }
+                case "c4":{
+                    header.textContent = 'Бельгія';
+                    flag.src = "https://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_Belgium_%28civil%29.svg";
+                    p2.textContent = 'Бельгія —  суверенна держава у Західній Європі. На півночі омивається Північним морем. Вартість квитка: 200₴.';
+                    h4_1.textContent = 'Гранд Плейс';
+                    img1.src = "https://upload.wikimedia.org/wikipedia/commons/9/91/Brussels_floral_carpet_B.jpg";
+                    h4_2.textContent = 'Канали та Дзвінниця Брюгге';
+                    img2.src = "https://mandry.club/wp-content/uploads/2020/01/brugge07-1024x576.jpg";
+                    h4_3.textContent = 'Поле битв Фландрії';
+                    img3.src = "https://theplanetsworld.com/wp-content3_2/14-top-rated-tourist-attractions-in-belgium-3.jpg";
+                    p4.textContent = 'Його звели на березі річки Шпрее в Берліні для парламенту Німецької імперії.\n' +
+                        '                    Останню цеглину в будівництві Рейхстагу (Reichstag) поклали 5 грудня 1894-го року.\n' +
+                        '                    Після возз\'єднання країни та реконструкції в 1999 році будівля стала частиною\n' +
+                        '                    парламентського комплексу Бундестагу - федерального парламенту Німеччини. Туристи\n' +
+                        '                    можуть відвідати скляний купол з оглядовим майданчиком.\n' +
+                        '                    Вартість квитка: 333₴.';
+                    p6.textContent = 'Серед найбільш впізнаваних визначних пам\'яток Бельгії - це красива дзвіниця\n' +
+                        '                    і Галле, які панують на головній площі Брюгге. Знайомство з середньовічною епохою, ця вражаюча\n' +
+                        '                    будівля колись функціонувала як головний ринковий зал міста, і чудово збереглася, дозволяючи\n' +
+                        '                    відвідувачам справді насолоджуватися архітектурною могутністю середньовіччя. Підйом на 366\n' +
+                        '                    намотування та вузькі кроки дзвіниці - одна з найулюбленіших справ у Бельгії. Одного разу у\n' +
+                        '                    верхній частині, вид на церковні шпилі та шпиль-дахи забезпечують одну з найбільш відомих панорам країни.\n' +
+                        '                    Вартість квитка: 666₴.';
+                    p8.textContent = 'Для багатьох відвідувачів роль Бельгії на першій лінії Першої світової війни та,\n' +
+                        '                    зокрема, поля боїв Фландрії навколо Іпр є основною причиною для подорожі тут. Історично не тільки\n' +
+                        '                    важливі, поля боїв є основним місцем паломництва. Збережені траншеї проходять за кілометри навколо\n' +
+                        '                    міста Іпр, тоді як ця територія також розкидані величезними кладовищами для тисяч солдатів, що\n' +
+                        '                    померли тут. The Кладовище Tyne Cot (Британський) і Лангеммарк Німецьке військове кладовище обидва\n' +
+                        '                    урочисті нагадування про жорстокі бої, що відбувалися тут під час Великої війни.\n' +
+                        '                    Вартість квитка: 999₴.';
+                    input_1.value = "333";
+                    input_2.value = "666";
+                    input_3.value = "999";
+                    label_1.textContent = 'Гранд Плейс';
+                    label_2.textContent = 'Канали та Дзвінниця Брюгге';
+                    label_3.textContent = 'Поле битв Фландрії';
+                    break;
+                }
+                case "c5":{
+                    header.textContent = 'Чехія';
+                    flag.src = "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_Czech_Republic.svg";
+                    p2.textContent = 'Чехія — держава в центральній Європі без виходу до моря, що межує на півночі і заході з Німеччиною. Вартість квитка: 100₴.';
+                    h4_1.textContent = 'Замок Глубока над Влтавою';
+                    img1.src = "https://upload.wikimedia.org/wikipedia/commons/5/50/Hlubok%C3%A1_nad_Vltavou_Castle_-_panoramio_%281%29.jpg";
+                    h4_2.textContent = 'Фортеця Терезин';
+                    img2.src = "https://pragagid.ru/wp-content/uploads/2014/09/IMG_2642.jpg";
+                    h4_3.textContent = 'Чеська Швейцарія';
+                    img3.src = "https://gls-space.ams3.digitaloceanspaces.com/lbcms-container-cz_excursions_resale/02f709d8-a43e-11ea-8545-baa2e45fb9df.webp";
+                    p4.textContent = 'Вважається найромантичнішим і найбільш відвідуваним замком на території Чеської Республіки.\n' +
+                        '                    Відвідувачі можуть побачити багату дерев\'яну облицювання стін, безліч дорогоцінних\n' +
+                        '                    знарядь і броні в збройовій палаті, найбільшу колекцію гобеленів в країні. Навколо\n' +
+                        '                    замку розбитий прекрасний англійський парк з рідкісними видами дерев. На території,\n' +
+                        '                    прилеглій до фортеці, розташовані заповідники і мисливські замки.' +
+                        '                    Вартість квитка: 888₴.';
+                    p6.textContent = 'Невелике місто, розташоване в 60 км від Праги. Був побудований в XVIII столітті і названий\n' +
+                        '                    на честь імператриці Марії Терезії. Перебуваючи на шляху проходження з Праги до Дрездена,\n' +
+                        '                    Терезин був побудований як місто-гарнізон у вигляді фортифікаційного укріплення з метоюм\n' +
+                        '                    опору прусської експансії. Фортеця належала до кращих зразків фортифікаційної архітектури\n' +
+                        '                    свого часу. Найсумнішим періодом в її історії стали 1941-1945 роки, коли тут був\n' +
+                        '                    створений нацистський концентраційний табір - єврейське гетто, куди крім чеських і \n' +
+                        '                    моравських євреїв звозили євреї з Німеччини, Австрії, Словаччини, Угорщини, Голландії\n' +
+                        '                    та Данії.' +
+                        '                    Вартість квитка: 444₴.';
+                    p8.textContent = 'Унікальний за своєю красою природний парк, розташований на території Північної Чехії,\n' +
+                        '                    майже біля самого кордону з Німеччиною, вражає своєю первозданною красою і величчю.\n' +
+                        '                    Тут є все, що необхідно справжньому туристу-мандрівникові для прекрасного відпочинку:\n' +
+                        '                    казкові густі ліси, романтичні гірські ріки, глибокі каньйони, мальовничі долини,\n' +
+                        '                    скелі, приголомшливі своєю вигадливістю й величчю, найчистіші повітря і вода,\n' +
+                        '                    пам\'ятники старовини, широкі можливості для активного відпочинку.\n' +
+                        '                    Вартість квитка: 222₴.';
+                    input_1.value = "888";
+                    input_2.value = "444";
+                    input_3.value = "222";
+                    label_1.textContent = 'Замок Глубока над Влтавою';
+                    label_2.textContent = 'Фортеця Терезин';
+                    label_3.textContent = 'Чеська Швейцарія';
+                    break;
+                }
+            }
+            p1.appendChild(flag);
+            p3.appendChild(img1);
+            p5.appendChild(img2);
+            p7.appendChild(img3);
+            item_1.appendChild(h4_1);
+            item_1.appendChild(p3);
+            item_1.appendChild(p4);
+            item_2.appendChild(h4_2);
+            item_2.appendChild(p5);
+            item_2.appendChild(p6);
+            item_3.appendChild(h4_3);
+            item_3.appendChild(p7);
+            item_3.appendChild(p8);
+            list.appendChild(item_1);
+            list.appendChild(item_2);
+            list.appendChild(item_3);
+            p9.appendChild(input_1);
+            label_1.for = "sight_1";
+            p9.appendChild(label_1);
+            p10.appendChild(input_2);
+            label_2.for = "sight_2";
+            p10.appendChild(label_2);
+            p11.appendChild(input_3);
+            label_3.for = "sight_3";
+            p11.appendChild(label_3);
+            wrapper.appendChild(header);
+            wrapper.appendChild(p1);
+            wrapper.appendChild(p2);
+            wrapper.appendChild(under_header);
+            wrapper.appendChild(list);
+            wrapper.appendChild(h3_1);
+            wrapper.appendChild(p9);
+            wrapper.appendChild(p10);
+            wrapper.appendChild(p11);
+            wrapper.appendChild(button_1);
+            document.getElementById("frm").appendChild(wrapper);
+        }
+    </script>
+</head>
+<body>
+    <form id="frm">
+        <section id="s1">
+            <h1>Тури по країнам Європи</h1>
+            <p>
+                <label for="country">Перглянути інформацію за тур по: </label>
+                <select id="country" name="user_country" onfocus="del()" onchange="add_country_info()">
+                    <option disabled selected>Оберіть країну</option>
+                    <option value="c1">Німеччина</option>
+                    <option value="c2">Франція</option>
+                    <option value="c3">Нідерланди</option>
+                    <option value="c4">Бельгія</option>
+                    <option value="c5">Чехія</option>
+                </select>
+            </p>
+        </section>
+    </form>
+</body>
+</html>

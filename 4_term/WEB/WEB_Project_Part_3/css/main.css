@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+html{
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#wrapper{
+  display: flex;
+  flex-direction: column;
+  background-image: url("https://i0.wp.com/wallpaperget.com/images/abstract-desktop-wallpapers-and-backgrounds-4.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+.content{
+  display: block;
+  max-width: 1000px;
+  height: 100%;
+  margin: auto;
+  padding: 0 10px;
+}
+
+#slider-wrapper .content{
+  padding: 0 15px;
+}
+
+#header-wrapper{
+  display: block;
+  background-color: #99CCCC;
+  width: 100%;
+  min-height: 180px;
+}
+
+#logo{
+  width: 120px;
+  height: 100px;
+}
+
+#company-name{
+  font-size: 1.5em;
+  color: #336799;
+}
+
+#left-header{
+  float: left;
+  display: flex;
+  align-items: stretch;
+  margin: 25px 0;
+}
+
+.left-header-text{
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.caps-text{
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+#feedback-text{
+  font-size: 1.5em;
+  border-bottom: 3px dotted #336799;
+  float: right;
+  color: black;
+  text-decoration: none;
+}
+
+#cart-text{
+  font-size: 1.5em;
+  border-bottom: 3px dotted #336799;
+  float: right;
+  color: black;
+  text-decoration: none;
+}
+
+a:focus{
+  cursor: pointer;
+}
+
+#right-header{
+  float: right;
+  line-height: 25px;
+  margin-top: 20px;
+}
+
+#footer-wrapper{
+  display: block;
+  background-color: #006799;
+  color: #CCCCCC;
+  width: 100%;
+  padding-top: 20px;
+}
+
+#footer-content{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+#menu-wrapper{
+  display: block;
+  width: 100%;
+  background-color: black;
+}
+
+#menu{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
+#menu li{
+  display: inline-block;
+  list-style-type: none;
+  margin: 15px 10px 0 10px;
+  color: white;
+}
+
+#menu li a{
+  text-decoration: none;
+  color: white;
+}
+
+#way-wrapper{
+  display: block;
+}
+
+#way{
+  color: black;
+  background-color: #B2D5EF;
+  height: 40px;
+  line-height: 20px;
+}
+
+#main{
+  padding-bottom: 50px;
+  background-color: #B2D5EF;
+}
+
+#left-block{
+  padding-left: 5px;
+  border-right: 1px solid #000033;
+  text-decoration: underline;
+  margin-bottom: 50px;
+}
+
+#left-block  ul li:hover{
+  cursor: pointer;
+}
+
+.list{
+  list-style-type: none;
+  margin-left: -30px;
+}
+
+#right-block{
+  flex: 1;
+}
+
+#bottom-text{
+  column-count: 2;
+  column-gap: 30px;
+  text-align: justify;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #000033;
+}
+
+.delivery{
+  padding-left: 3%;
+  background-color: #B2D5EF;
+}
+
+.delivery .row{
+  margin-left: -4%;
+}
+
+#map{
+  border: 3px solid #000033;
+  border-radius: 10px;
+  width: 100%;
+}
+
+#footer-wrapper .container-fluid .content ul li a{
+  color: #000033;
+}
+
+.add_item{
+  float: left;
+  margin-top: -3px;
+}
+
+@media (max-width: 1000px){
+  .content {
+    width: 100%;
+    height: 100%;
+  }
+
+  #header-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 768px){
+  #header-wrapper .content{
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  #header-wrapper .content #feedback-text{
+    float: none;
+  }
+  #header-wrapper .content #cart-text{
+    float: none;
+  }
+  #header-wrapper .content #right-header{
+    text-align: center;
+    margin-top: -15px;
+  }
+  #header-wrapper .content p{
+    line-height: 20px;
+  }
+  #header-wrapper .content a{
+    line-height: 20px;
+  }
+
+  #content-wrapper .content aside{
+    align-items: center;
+    margin-bottom: 0;
+    padding-top: 15px;
+    padding-left: 50px;
+    line-height: 20px;
+    border-right: none;
+  }
+
+  #bottom-text{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000033;
+  }
+
+  #content-wrapper .content aside p{
+    line-height: 15px;
+  }
+
+  #content-wrapper .content aside li{
+    line-height: 20px;
+  }
+}

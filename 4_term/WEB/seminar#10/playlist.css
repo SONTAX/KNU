@@ -1,0 +1,13 @@
+form {
+    position: absolute;
+    left: 30%;
+    width: 40%;
+    border-radius: 20px;
+    border: 1px solid gray;
+    padding: 0 30px;
+}
+
+input:is([type="button"]) {
+    margin-left: 5px;
+    width: 20%;
+}

@@ -1,5 +1,0 @@
-namespace Ziben {
-
-
-
-} // namespace Ziben

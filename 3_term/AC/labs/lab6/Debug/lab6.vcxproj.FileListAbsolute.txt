@@ -1,0 +1,4 @@
+C:\Users\niche\source\repos\lab6\Debug\lab6.exe
+C:\Users\niche\source\repos\lab6\Debug\lab6.pdb
+C:\Users\niche\1\KNU\AC\labs\lab6\Debug\lab6.exe
+C:\Users\niche\1\KNU\AC\labs\lab6\Debug\lab6.pdb

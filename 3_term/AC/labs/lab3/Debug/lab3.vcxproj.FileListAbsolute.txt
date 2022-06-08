@@ -1,0 +1,4 @@
+C:\Users\niche\1\KNU\АС\Лабы\lab3\Debug\lab3.exe
+C:\Users\niche\1\KNU\АС\Лабы\lab3\Debug\lab3.pdb
+C:\Users\niche\1\KNU\AC\labs\lab3\Debug\lab3.exe
+C:\Users\niche\1\KNU\AC\labs\lab3\Debug\lab3.pdb

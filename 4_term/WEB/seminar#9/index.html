@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seminar 9</title>
+    <style>
+        #myForm {
+            background-color: lightseagreen;
+            width: 70%;
+            position: absolute;
+            left: 15%;
+        }
+        div {
+            border: 1px solid black;
+            margin: 5px 5px 5px 5px;
+            padding: 2px 2px 2px 2px;
+        }
+        #section_1 {
+            text-align: center;
+            font-weight: bolder;
+            font-size: 22px;
+        }
+        #section_5 {
+            text-align: right;
+        }
+        #section_7 {
+            text-align: right;
+        }
+        #bill {
+            margin: 5px 5px 5px 5px;
+            padding: 2px 2px 2px 2px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: calc(100% - 10px);
+            text-align: center;
+        }
+        th {
+            border: 1px solid black;
+        }
+        tr {
+            border: 1px solid black;
+        }
+        td {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function fullPrice() {
+            let full = Number(document.getElementById("selector").value) * Number(document.getElementById("quantity").value);
+            let delivery;
+            if (document.getElementById("post").checked) {
+                delivery = 0.05;
+            } else {
+                delivery = 0.15;
+            }
+            if (document.getElementById("present").checked) {
+                delivery += 0.1;
+            }
+            full = full + full * delivery;
+            document.getElementById("price").value = full;
+        }
+        function _clear() {
+            document.getElementById("quantity").value = 0;
+            document.getElementById("cost").value = "";
+            document.getElementById("post").checked = true;
+            document.getElementById("present").checked = false;
+            document.getElementById("name").value = "";
+            document.getElementById("address").value = "";
+            document.getElementById("price").value = "";
+        }
+        function _cost() {
+            let itemCost = Number(document.getElementById("selector").value) * Number(document.getElementById("quantity").value);
+            document.getElementById("cost").value = itemCost;
+        }
+        function moreThenZero() {
+            if (document.getElementById("quantity").value < 0) {
+                document.getElementById("quantity").value = 0;
+                document.getElementById("cost").value = 0;
+            }
+        }
+        function sendData() {
+            if ((document.getElementById("name").value === "") || (document.getElementById("address").value === "")) {
+                alert("Поля ім'я та адреса мають бути заповненні!");
+            } else {
+                let table = document.getElementById("bill");
+                let isNew = true;
+                fullPrice();
+                if (!table) {
+                    let newTable = document.createElement("table");
+                    newTable.id = "bill";
+                    let headerRow = document.createElement("tr");
+                    let c1 = document.createElement("td");
+                    c1.textContent = "Назва книги";
+                    let c2 = document.createElement("td");
+                    c2.textContent = "Кількість проданих книг";
+                    let c3 = document.createElement("td");
+                    c3.textContent = "Вартість проданих книг";
+                    let c4 = document.createElement("td");
+                    c4.textContent = "Спосіб доставки";
+                    headerRow.appendChild(c1);
+                    headerRow.appendChild(c2);
+                    headerRow.appendChild(c3);
+                    headerRow.appendChild(c4);
+                    newTable.appendChild(headerRow);
+                    table = newTable;
+                } else {
+                    isNew = false;
+                }
+                let title = document.getElementById("selector").value;
+                switch (title) {
+                    case "11": {
+                        title = "Володар перснів";
+                        break;
+                    }
+                    case "22": {
+                        title = "Відьмак";
+                        break;
+                    }
+                    case "15": {
+                        title = "Оселя зла";
+                        break;
+                    }
+                    case "20": {
+                        title = "Голодні ігри";
+                        break;
+                    }
+                    case "23": {
+                        title = "Гаррі Поттер";
+                        break;
+                    }
+                }
+                let quantity = document.getElementById("quantity").value;
+                let price = document.getElementById("price").value;
+                let delivery;
+                if (document.getElementById("post").checked) {
+                    delivery = "Доставка поштою";
+                } else {
+                    delivery = "Доставка до дому";
+                }
+                if (document.getElementById("present").checked) {
+                    delivery += " у святковій упаковці";
+                }
+                let dataRow = document.createElement("tr");
+                let c1 = document.createElement("td");
+                c1.textContent = title;
+                let c2 = document.createElement("td");
+                c2.textContent = quantity;
+                let c3 = document.createElement("td");
+                c3.textContent = price;
+                let c4 = document.createElement("td");
+                c4.textContent = delivery;
+                dataRow.appendChild(c1);
+                dataRow.appendChild(c2);
+                dataRow.appendChild(c3);
+                dataRow.appendChild(c4);
+                table.appendChild(dataRow);
+                if (isNew) {
+                    document.getElementById("myForm").appendChild(table);
+                }
+                _clear();
+                alert("Дякуємо за покупку!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="myForm">
+        <div id="section_1">
+            Замовлення на придбання товару
+        </div>
+        <div id="section_2">
+            <label for="selector">Назва товару</label>
+            <br>
+            <select id="selector" onchange="_cost()" name="user_book">
+                <option value="11">Володар перснів - 11</option>
+                <option value="22">Відьмак - 22</option>
+                <option value="15">Оселя зла - 15</option>
+                <option value="20">Голодні ігри - 20</option>
+                <option value="23">Гаррі Поттер - 23</option>
+            </select>
+        </div>
+        <div id="section_3">
+            <label for="quantity">Кількість: </label>
+            <input type="number" onchange="_cost(), moreThenZero()"  id="quantity" required value="0">
+            <label for="cost">Вартість: </label>
+            <input type="number" id="cost" readonly>
+        </div>
+        <div id="section_4">
+            Спосіб доставки замовлення
+            <br>
+            <input type="radio" id="post" name="post" checked>
+            <label for="post">Поштою</label>
+            <br>
+            <input type="radio" id="courier" name="post">
+            <label for="courier">Доставка до дому</label>
+            <br>
+            <input type="checkbox" id="present" name="present">
+            <label for="present">У святковій упаковці</label>
+        </div>
+        <div id="section_5">
+            <label for="price">Загальна вартсіть замовлення </label>
+            <input type="number" id="price" readonly>
+            <input type="button" onclick="fullPrice()" value="Підрахувати">
+        </div>
+        <div id="section_6">
+            Дані замовника
+            <br>
+            <label for="name">Ім'я: </label>
+            <input type="text" id="name">
+            <label for="address">Адреса: </label>
+            <input type="text" id="address">
+        </div>
+        <div id="section_7">
+            <input type="button" onclick="_clear()" value="Відновити початкові значення полів">
+            <input type="button" onclick="sendData()" value="Відслати дані">
+        </div>
+    </form>
+</body>
+</html>

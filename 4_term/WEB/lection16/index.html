@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture 16</title>
+    <script>
+        function DATE(){
+            let t = new Date();
+            let monthes = [" січня ", " лютого ", " березня ", " квітня ", " травня ", " червня ", " липня ", " серпня ", " вересня ", " жовтня ", " листопада ", " грудня "];
+            let day = t.getDay();
+            let mon = t.getMonth();
+            let year = t.getFullYear();
+            let hour = t.getHours();
+            let min = t.getMinutes();
+            let sec = t.getSeconds();
+            let res = "Сьогодні: " + day + monthes[mon] + year + " року " + hour + " годин " + min + " хвилин " + sec + " секунд";
+            alert(res);
+        }
+    </script>
+</head>
+<body onload="DATE()">
+</body>
+</html>

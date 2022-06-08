@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture 16</title>
+    <script>
+      function add(obj, pair){
+        let to_add = pair.key;
+        if(!(to_add in obj)){
+          obj[to_add] = pair.value;
+        }
+      }
+      function Properties_1(obj){
+        console.log(Object.keys(obj));
+      }
+      function Properties_2(obj){
+        for (const property in obj) {
+          console.log(`${property}: ${obj[property]}`);
+        }
+      }
+      function Properties_3(obj){
+        console.log(Object.getOwnPropertyNames(obj));
+      }
+      function Properties_4(obj){
+        let objectToInspect;
+        let result = [];
+        for(objectToInspect = obj; objectToInspect !== null; objectToInspect = Object.getPrototypeOf(objectToInspect)){
+          result = result.concat(Object.getOwnPropertyNames(objectToInspect));
+        }
+        console.log(result);
+      }
+
+      Car = {
+        'model': 'Lada',
+        'cost': 200
+      }
+      Property_1 = {
+        'key': 'owner',
+        'value': 'Bob'
+      }
+      Property_2 = {
+        'key': 'owner',
+        'value': 'Tom'
+      }
+      console.log(Car);
+      add(Car, Property_1);
+      console.log(Car);
+      add(Car, Property_2);
+      console.log(Car);
+      Properties_1(Car);
+      Properties_2(Car);
+      Properties_3(Car);
+      Properties_4(Car);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
